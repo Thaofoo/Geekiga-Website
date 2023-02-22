@@ -1,0 +1,87 @@
+body{
+    margin: 0px;
+    font-family: 'Inter', sans-serif;
+}
+
+.hero {
+    top: 0px;
+    left: 0px;
+    margin: 0px;
+    background: rgb(50,36,10);
+    background: -moz-linear-gradient(140deg, rgba(50,36,10,1) 0%, rgba(16,12,4,1) 100%);
+    background: -webkit-linear-gradient(140deg, rgba(50,36,10,1) 0%, rgba(16,12,4,1) 100%);
+    background: linear-gradient(140deg, rgba(50,36,10,1) 0%, rgba(16,12,4,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#32240a",endColorstr="#100c04",GradientType=1);
+    height: 900px;
+    width: 100%;
+}
+
+.navbar_container{
+    background: rgb(0,0,0);
+    background: -moz-linear-gradient(180deg, rgba(0, 0, 0, 0.25) 0%, rgba(0,0,0,0) 100%);
+    background: -webkit-linear-gradient(180deg, rgba(0,0,0,0.25) 0%, rgba(0,0,0,0) 100%);
+    background: linear-gradient(180deg, rgba(0,0,0,0.25) 0%, rgba(0,0,0,0) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000",endColorstr="#000000",GradientType=1);
+    position: fixed;
+    width: 100%;
+    height: fit-content;
+
+}
+
+.navbar_logged_off{
+    width: 95%;
+    color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.navbar_logged_off a {
+    margin: 18px;
+}
+
+.navbar_logged_off a:hover {
+    cursor: pointer;
+}
+
+.navbar_logged_off_right{
+    font-size: 13px;
+    font-weight: 300;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: rgba(255, 255, 255, 0.355);
+}
+
+.navbar_logged_off_right_signup{
+    color: white;
+    padding: 7px 11px 7px 11px;
+    width: 80px;
+    border-radius: 9px;
+    background-color: rgba(82, 10, 0, 0.989);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.navbar_logged_off_right_signup:hover{
+    background-color: rgba(177, 28, 9, 0.989);;
+}
+
+.navbar_logged_off_right_login{
+    color: white;
+}
+
+.hero_text{
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    background-color: rgba(240, 248, 255, 0);
+    position: absolute;
+    top: 190px;
+    right: 110px;
+    width: 800px;
+    height: 420px;
+}
