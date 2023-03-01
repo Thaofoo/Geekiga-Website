@@ -2,16 +2,17 @@ body{
     margin: 0px;
     font-family: 'Inter', sans-serif;
     color: #7c7972;
+    background: rgb(50,36,10);
+    background: -moz-linear-gradient(140deg, rgba(50,36,10,1) 0%, rgba(16,12,4,1) 100%);
+    background: -webkit-linear-gradient(140deg, rgba(50,36,10,1) 0%, rgba(16,12,4,1) 100%);
+    background: linear-gradient(140deg, rgba(50,36,10,1) 0%, rgba(16,12,4,1) 100%);
+
 }
 
 .hero {
     top: 0px;
     left: 0px;
     margin: 0px;
-    background: rgb(50,36,10);
-    background: -moz-linear-gradient(140deg, rgba(50,36,10,1) 0%, rgba(16,12,4,1) 100%);
-    background: -webkit-linear-gradient(140deg, rgba(50,36,10,1) 0%, rgba(16,12,4,1) 100%);
-    background: linear-gradient(140deg, rgba(50,36,10,1) 0%, rgba(16,12,4,1) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#32240a",endColorstr="#100c04",GradientType=1);
     height: 900px;
     width: 100%;
@@ -68,7 +69,7 @@ body{
 }
 
 .navbar_logged_off_right_signup:hover{
-    background-color: rgba(177, 28, 9, 0.989);;
+    background-color: rgb(177, 29, 9);
 }
 
 .navbar_logged_off_right_login{
@@ -94,7 +95,7 @@ body{
     margin-bottom: 20px;
 }
 
-.hero_title img{
+.hero_title_wall{
     margin-bottom: 35px;
 }
 
@@ -110,8 +111,27 @@ body{
     font-size: 20px;
     width: 88%;
     font-weight: 200;
+    margin-bottom: 25px;
 }
 
 .hero_title_login{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 150px;
+    background-color: rgba(82, 10, 0, 0.989);
+    color: white;
+    font-weight: 300;
+    padding: 7px 15px 7px 15px;
+    border-radius: 10px;
+}
 
+.hero_title_login:hover{
+    background-color: rgb(177, 29, 9);
+}
+
+.tagline{
+    background-color: transparent;
+    background-image: url("/public/interface_assets/tagline_bg.png");
+    height: 720px;
 }
