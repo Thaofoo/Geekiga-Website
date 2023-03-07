@@ -1,11 +1,11 @@
-body{
+body {
     margin: 0px;
     font-family: 'Inter', sans-serif;
     color: #7c7972;
-    background: rgb(50,36,10);
-    background: -moz-linear-gradient(140deg, rgba(50,36,10,1) 0%, rgba(16,12,4,1) 100%);
-    background: -webkit-linear-gradient(140deg, rgba(50,36,10,1) 0%, rgba(16,12,4,1) 100%);
-    background: linear-gradient(140deg, rgba(50,36,10,1) 0%, rgba(16,12,4,1) 100%);
+    background: rgb(50, 36, 10);
+    background: -moz-linear-gradient(140deg, rgba(50, 36, 10, 1) 0%, rgba(16, 12, 4, 1) 100%);
+    background: -webkit-linear-gradient(140deg, rgba(50, 36, 10, 1) 0%, rgba(16, 12, 4, 1) 100%);
+    background: linear-gradient(140deg, rgba(50, 36, 10, 1) 0%, rgba(16, 12, 4, 1) 100%);
 
 }
 
@@ -13,24 +13,24 @@ body{
     top: 0px;
     left: 0px;
     margin: 0px;
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#32240a",endColorstr="#100c04",GradientType=1);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#32240a", endColorstr="#100c04", GradientType=1);
     height: 900px;
     width: 100%;
 }
 
-.navbar_container{
-    background: rgb(0,0,0);
-    background: -moz-linear-gradient(180deg, rgba(0, 0, 0, 0.25) 0%, rgba(0,0,0,0) 100%);
-    background: -webkit-linear-gradient(180deg, rgba(0,0,0,0.25) 0%, rgba(0,0,0,0) 100%);
-    background: linear-gradient(180deg, rgba(0,0,0,0.25) 0%, rgba(0,0,0,0) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000",endColorstr="#000000",GradientType=1);
+.navbar_container {
+    background: rgb(0, 0, 0);
+    background: -moz-linear-gradient(180deg, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0) 100%);
+    background: -webkit-linear-gradient(180deg, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0) 100%);
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000", endColorstr="#000000", GradientType=1);
     position: fixed;
     width: 100%;
     height: fit-content;
 
 }
 
-.navbar_logged_off{
+.navbar_logged_off {
     width: 95%;
     color: rgb(255, 255, 255);
     display: flex;
@@ -48,7 +48,7 @@ body{
     cursor: pointer;
 }
 
-.navbar_logged_off_right{
+.navbar_logged_off_right {
     font-size: 13px;
     font-weight: 300;
     display: flex;
@@ -57,7 +57,7 @@ body{
     color: rgba(255, 255, 255, 0.355);
 }
 
-.navbar_logged_off_right_signup{
+.navbar_logged_off_right_signup {
     color: white;
     padding: 7px 11px 7px 11px;
     width: 80px;
@@ -66,17 +66,30 @@ body{
     display: flex;
     justify-content: space-around;
     align-items: center;
+    text-decoration: none;
 }
 
-.navbar_logged_off_right_signup:hover{
+.navbar_logged_off_right_signup:hover {
     background-color: rgb(177, 29, 9);
 }
 
-.navbar_logged_off_right_login{
+.navbar_logged_off_right_login {
     color: white;
+    padding: 7px 11px 7px 11px;
+    width: 80px;
+    border-radius: 9px;
+    background-color: rgba(82, 10, 0, 0.989);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-decoration: none;
 }
 
-.hero_title{
+.navbar_logged_off_right_login:hover {
+    background-color: rgb(177, 29, 9);
+}
+
+.hero_title {
     display: flex;
     position: absolute;
     flex-direction: column;
@@ -87,7 +100,7 @@ body{
     height: 420px;
 }
 
-.hero_title_featured{
+.hero_title_featured {
     font-size: 18px;
     color: #494640;
     border-bottom: 1.5px #7c7972 solid;
@@ -95,17 +108,17 @@ body{
     margin-bottom: 20px;
 }
 
-.hero_title_wall{
+.hero_title_wall {
     margin-bottom: 35px;
 }
 
-.hero_title_subdesc{
+.hero_title_subdesc {
     font-size: 16px;
     margin-bottom: 5px;
     color: #514222;
 }
 
-.hero_title_desc{
+.hero_title_desc {
     color: white;
     text-align: right;
     font-size: 20px;
@@ -114,7 +127,7 @@ body{
     margin-bottom: 25px;
 }
 
-.hero_title_login{
+.hero_title_login {
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -124,13 +137,14 @@ body{
     font-weight: 300;
     padding: 7px 15px 7px 15px;
     border-radius: 10px;
+    text-decoration: none;
 }
 
-.hero_title_login:hover{
+.hero_title_login:hover {
     background-color: rgb(177, 29, 9);
 }
 
-.tagline{
+.tagline {
     background-color: transparent;
     background-image: url("/public/interface_assets/tagline_bg.png");
     height: 720px;
