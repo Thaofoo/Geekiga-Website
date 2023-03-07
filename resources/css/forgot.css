@@ -37,7 +37,7 @@ body {
 
 
 form {
-    height: 520px;
+    height: 420px;
     width: 500px;
     background-color: rgba(19, 19, 19, 0.588);
     position: absolute;
@@ -97,9 +97,15 @@ input {
 
 }
 
+.suggest {
+    text-align: center;
+    font-size: 14px;
+    padding: 0px 10px 0px 10px;
+}
+
 button {
-    margin-top: 15px;
-    height: 45px;
+    margin-top: 20px;
+    height: 50px;
     width: 100%;
     background-color: rgb(112, 79, 6);
     color: #ffffff;
@@ -112,80 +118,15 @@ button {
 
 }
 
-.or-separator {
-    margin-top: 20px;
-    text-align: center;
-    /* border-top: 1px solid #ccc; */
+.suggest .resend {
+    color: rgb(184, 137, 33);
 }
 
-.or-separator i {
-    background: #ffffff00;
-    position: rergb(65, 255, 201);
-    z-index: 1;
+.suggest .login {
+    color: rgb(184, 137, 33);
+    /* text-decoration: none; */
 }
-
-.social {
-    margin-top: 20px;
-    display: flex;
-    font-size: 10px;
-    font-weight: 500;
-    line-height: 42px;
-}
-
-.social div {
-    width: 200px;
-    height: 40px;
-    border-radius: 20px;
-    padding: 0px 0px 0px 10px;
-    color: #000000;
-    text-align: start;
-    align-items: center;
-    display: flex;
-    background-color: rgb(255, 255, 255);
-}
-
-.social div:hover {
-    background-color: rgba(255, 255, 255, 0.599);
-}
-
-.social .fb {
-    margin-left: 25px;
-
-}
-
-.social i {
-    margin-right: 5px;
-}
-
 
 .SizedBox {
-    height: 10px;
-}
-
-.social-logo {
-    padding-right: 10px;
-    height: 25px;
-    object-fit: contain;
-    background-color: rgba(255, 255, 255, 0);
-}
-
-.reset {
-    font-size: 14px;
-    text-align: center;
-    padding: 25px 0px;
-}
-
-.forgot {
-    color: rgb(184, 137, 33);
-    /* text-decoration: none; */
-}
-
-.suggest {
-    text-align: center;
-    font-size: 14px;
-}
-
-.suggest .sign {
-    color: rgb(184, 137, 33);
-    /* text-decoration: none; */
+    height: 20px;
 }

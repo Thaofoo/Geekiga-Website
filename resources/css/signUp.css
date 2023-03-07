@@ -98,7 +98,7 @@ input {
 }
 
 button {
-    margin-top: 15px;
+    margin-top: 25px;
     height: 45px;
     width: 100%;
     background-color: rgb(112, 79, 6);
@@ -162,30 +162,12 @@ button {
     height: 10px;
 }
 
-.social-logo {
-    padding-right: 10px;
-    height: 25px;
-    object-fit: contain;
-    background-color: rgba(255, 255, 255, 0);
-}
-
-.reset {
-    font-size: 14px;
-    text-align: center;
-    padding: 25px 0px;
-}
-
-.forgot {
-    color: rgb(184, 137, 33);
-    /* text-decoration: none; */
-}
-
 .suggest {
     text-align: center;
     font-size: 14px;
 }
 
-.suggest .sign {
+.suggest .login {
     color: rgb(184, 137, 33);
     /* text-decoration: none; */
 }
