@@ -1,0 +1,191 @@
+*,
+html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* Ini diset 0 biar enak bisa sampe pojok,
+    soalnya default bawaan tuh 2px an kayanya*/
+}
+
+body {
+    font-family: 'inter', sans-serif;
+    height: 100vh;
+    background-image: url("/public/interface_assets/tagline_bg.png");
+    background-color: rgb(33, 16, 4);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* biar kalo di zoom out zoom in ga berubah bg nya*/
+}
+
+
+.container-content1 {
+    padding-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    width: auto;
+}
+
+.img-content1 {
+    height: 60px;
+    object-fit: contain;
+    /* biar ga keikut semisal di split screen, 
+    gausa di kasi width  */
+}
+
+
+form {
+    height: 520px;
+    width: 500px;
+    background-color: rgba(19, 19, 19, 0.588);
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    border-radius: 40px;
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(35, 35, 35, 0);
+    /* box-shadow: 0 0 40px rgba(8, 7, 16, 0); */
+    padding: 30px 35px;
+}
+
+
+form * {
+    font-family: 'Inter', sans-serif;
+    color: #dddddd;
+    letter-spacing: 0.5px;
+    outline: none;
+    border: none;
+}
+
+form h3 {
+    font-size: 38px;
+    font-weight: 600;
+    line-height: 42px;
+    text-align: center;
+    color: #ffffff;
+    padding-bottom: 20px;
+    align-items: center;
+}
+
+label {
+    display: block;
+    margin-top: 30px;
+    font-size: 16px;
+    font-weight: 500;
+    color: rgb(144, 144, 144);
+}
+
+input {
+    color: rgb(112, 112, 112);
+    display: block;
+    height: 50px;
+    width: 100%;
+    background-color: rgb(43, 43, 43);
+    border-radius: 30px;
+    padding: 0 10px;
+    margin-top: 8px;
+    font-size: 14px;
+    font-weight: 400;
+    text-indent: 15px;
+}
+
+::placeholder {
+    color: rgb(112, 112, 112);
+
+}
+
+button {
+    margin-top: 15px;
+    height: 45px;
+    width: 100%;
+    background-color: rgb(112, 79, 6);
+    color: #ffffff;
+    padding: 10px 0;
+    font-size: 18px;
+    font-weight: 400;
+    border-radius: 5px;
+    cursor: pointer;
+    border-radius: 30px;
+
+}
+
+.or-separator {
+    margin-top: 20px;
+    text-align: center;
+    /* border-top: 1px solid #ccc; */
+}
+
+.or-separator i {
+    background: #ffffff00;
+    position: rergb(65, 255, 201);
+    z-index: 1;
+}
+
+.social {
+    margin-top: 20px;
+    display: flex;
+    font-size: 10px;
+    font-weight: 500;
+    line-height: 42px;
+}
+
+.social div {
+    width: 200px;
+    height: 40px;
+    border-radius: 20px;
+    padding: 0px 0px 0px 10px;
+    color: #000000;
+    text-align: start;
+    align-items: center;
+    display: flex;
+    background-color: rgb(255, 255, 255);
+}
+
+.social div:hover {
+    background-color: rgba(255, 255, 255, 0.599);
+}
+
+.social .fb {
+    margin-left: 25px;
+
+}
+
+.social i {
+    margin-right: 5px;
+}
+
+
+.SizedBox {
+    height: 10px;
+}
+
+.social-logo {
+    padding-right: 10px;
+    height: 25px;
+    object-fit: contain;
+    background-color: rgba(255, 255, 255, 0);
+}
+
+.reset {
+    font-size: 14px;
+    text-align: center;
+    padding: 25px 0px;
+}
+
+.forgot {
+    color: rgb(184, 137, 33);
+    /* text-decoration: none; */
+}
+
+.suggest {
+    text-align: center;
+    font-size: 14px;
+}
+
+.suggest .sign {
+    color: rgb(184, 137, 33);
+    /* text-decoration: none; */
+}
