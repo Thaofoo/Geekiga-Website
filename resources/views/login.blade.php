@@ -14,12 +14,12 @@
             rel="stylesheet">
     </head>
 
-    <body>
+    <body style="background-image: url('{{ asset('interface_assets/tagline_bg.png')}}');">
 
         <div class="container">
 
             <div class="container-content1">
-                <img src="/public/images/GEEKIGA LOGO.png" alt="Logo" class="img-content1" />
+                <img src="{{ asset('images/GEEKIGA LOGO.png') }}" alt="Logo" class="img-content1" />
             </div>
             <div class="form">
                 <form>
@@ -32,7 +32,7 @@
                     <input type="password" placeholder="Password" id="password">
 
                     <div class="reset">
-                        <a href="forgot.html" class="forgot">Forgot Your Password?</a>
+                        <a href="{{ URL::to('forgot') }}" class="forgot">Forgot Your Password?</a>
                     </div>
 
                     <button>Login</button>
@@ -40,17 +40,17 @@
                     <div class="or-separator"><i>or Continue with</i></div>
                     <div class="social">
                         <div class="go"><i class="fab fa-google"></i>
-                            <img src="/public/images/Google.png" class="social-logo">
+                            <img src="{{ asset('images/Google.png') }}" class="social-logo">
                             Google
                         </div>
                         <div class="fb"><i class="fab fa-facebook"></i>
-                            <img src="/public/images/Facebook.png" class="social-logo">
+                            <img src="{{ asset('images/Facebook.png') }}" class="social-logo">
                             Facebook
                         </div>
                     </div>
                     <div class="SizedBox"></div>
                     <div class="SizedBox"></div>
-                    <p class="suggest">Don't have an account? <a href="signUp.html" class="sign">Sign up here!</a></p>
+                    <p class="suggest">Don't have an account? <a href="{{ URL::to('signup') }}" class="sign">Sign up here!</a></p>
                 </form>
             </div>
 

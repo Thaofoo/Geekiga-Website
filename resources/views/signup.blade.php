@@ -14,12 +14,12 @@
             rel="stylesheet">
     </head>
 
-    <body>
+    <body style="background-image: url('{{ asset('interface_assets/tagline_bg.png')}}');">
 
         <div class="container">
 
             <div class="container-content1">
-                <img src="/public/images/GEEKIGA LOGO.png" alt="Logo" class="img-content1" />
+                <img src="{{ asset('images/GEEKIGA LOGO.png') }}" alt="Logo" class="img-content1" />
             </div>
             <div class="form">
                 <form>
@@ -36,7 +36,7 @@
 
                     <div class="SizedBox"></div>
                     <div class="SizedBox"></div>
-                    <p class="suggest">Already have an account? <a href="login.html" class="login">Login!</a></p>
+                    <p class="suggest">Already have an account? <a href="{{ URL::to('login') }}" class="login">Login!</a></p>
                 </form>
             </div>
 

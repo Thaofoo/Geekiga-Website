@@ -7,14 +7,14 @@
     <title>Geekiga Login</title>
     <link rel="icon" type="png" href="/public/images/small-logo.png">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link rel="stylesheet" type="text/css" href="{{ asset('css/landing.css') }}" >
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/forgot.css') }}" >
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
         rel="stylesheet">
 </head>
 
-<body>
+<body style="background-image: url('{{ asset('interface_assets/tagline_bg.png')}}');">
 
     <div class="container">
 
@@ -34,7 +34,7 @@
                 <div class="SizedBox"></div>
                 <p class="suggest">Didn't receive our email? <a href="#" class="resend">Resend</a></p>
                 <div class="SizedBox"></div>
-                <p class="suggest">Already have an account? <a href="login.html" class="login">Login!</a></p>
+                <p class="suggest">Already have an account? <a href="{{ URL::to('login') }}" class="login">Login!</a></p>
             </form>
         </div>
 
