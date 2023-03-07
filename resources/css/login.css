@@ -97,7 +97,8 @@ input {
 }
 
 button {
-    margin-top: 50px;
+    margin-top: 30px;
+    height: 45px;
     width: 100%;
     background-color: rgb(112, 79, 6);
     color: #ffffff;
@@ -141,7 +142,7 @@ button {
     background-color: rgb(255, 255, 255);
     color: #000000;
     text-align: start;
-    background-color: brown;
+    /* background-color: brown; */
 }
 
 .social div:hover {
@@ -165,7 +166,7 @@ button {
     align-content: center;
     height: 25px;
     object-fit: contain;
-    background-color: aqua;
+    /* background-color: aqua; */
 }
 
 .clearfix {
@@ -180,4 +181,8 @@ button {
     color: rgb(184, 137, 33);
 
     /* text-decoration: none; */
+}
+
+.suggest {
+    text-align: center;
 }
