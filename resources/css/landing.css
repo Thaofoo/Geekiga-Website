@@ -91,6 +91,15 @@ body {
     background-color: rgb(177, 29, 9);
 }
 
+.navbar_logged_off_right_login2 {
+    color: rgba(255, 255, 255, 0.355);
+    text-decoration: none;
+}
+
+.navbar_logged_off_right_login2:hover {
+    color: rgb(255, 255, 255);
+}
+
 .hero_title {
     display: flex;
     position: absolute;
