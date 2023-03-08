@@ -6,7 +6,10 @@
         <link rel="stylesheet" type="text/css" href="{{ asset('css/landing.css') }}" >
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;600&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;600;700;800&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
     </head>
 
     <body>
@@ -17,7 +20,7 @@
                     <img src="{{ asset('images/GEEKIGA LOGO.png') }}" height="30px">
                 </div>
                 <div class="navbar_logged_off_right">
-                    <a href="signUp.html" class="navbar_logged_off_right_signup">
+                    <a href="{{ URL::to('signup') }}" class="navbar_logged_off_right_signup">
                         <img src="{{ asset('interface_assets/Person.svg') }}" height="16px">
                         <img src="{{ asset('interface_assets/Line.svg') }}" height="16px">
                         Sign Up
@@ -59,7 +62,14 @@
         </div>
 
         <div class="tagline" style="background-image: url('{{ asset('interface_assets/tagline_bg.png')}}');">
-
+            <div class="tagline_container">
+                <div class="tagline_header">
+                    Geek Out With <span>Geekiga</span>
+                </div>
+                <div class="tagline_desc">
+                    Start watching your favorite movies and shows with Geekiga now! Experience a simple and fast service, tailored just for you!
+                </div>
+            </di >
         </div>
 
     </body>
