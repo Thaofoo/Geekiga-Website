@@ -19,7 +19,7 @@
     <div class="container">
 
         <div class="container-content1">
-            <img src="/public/images/GEEKIGA LOGO.png" alt="Logo" class="img-content1" />
+            <img src='{{ asset('images/GEEKIGA LOGO.png')}}' alt="Logo" class="img-content1" />
         </div>
         <div class="form">
             <form>
