@@ -32,8 +32,9 @@
                 <input type="text" placeholder="Email" id="username">
                 <button>Send Email</button>
                 <div class="SizedBox"></div>
-                <p class="suggest">Didn't receive our email? <a href="#" class="resend">Resend</a></p>
                 <div class="SizedBox"></div>
+                <p class="suggest">Didn't receive our email? <a href="#" class="resend">Resend</a></p>
+                
                 
             </form>
         </div>
