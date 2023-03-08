@@ -36,7 +36,9 @@
                     <a href="{{ URL::to('forgot') }}" class="forgot">Forgot Your Password?</a>
                 </div>
 
-                <button>Login</button>
+                <a class="loginbutton" href="{{ URL::to('home') }}">
+                    Login
+                </a>
 
                 <div class="or-separator"><i>or Continue with</i></div>
                 <div class="social">
