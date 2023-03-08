@@ -23,7 +23,7 @@
                         Sign Up
                     </a>
                     or -->
-                <a href="login.html" class="navbar_logged_off_right_login">
+                <a href="{{ URL::to('login') }}" class="navbar_logged_off_right_login">
                     <img src="{{ asset('interface_assets/Person.svg') }}" height="16px">
                     <img src="{{ asset('interface_assets/Line.svg') }}" height="16px">
                     Sign In
@@ -47,7 +47,7 @@
                     body with that of a dog-like devil named Pochita, granting him the ability to transform parts of his
                     body into chainsaws.
                 </div>
-                <a href="{{ URL::to('forgot') }}" class="hero_title_login">
+                <a href="{{ URL::to('login') }}" class="hero_title_login">
                     <img src="{{ asset('interface_assets/tri.svg') }}">
                     <img src="{{ asset('interface_assets/Line.svg') }}">
                     Log In to Play
