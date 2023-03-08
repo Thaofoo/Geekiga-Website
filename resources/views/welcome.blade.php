@@ -2,7 +2,7 @@
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
         <title>Geekiga - Geek Out With Geekiga</title>
-        <link rel="icon" type="png" href="/public/images/small-logo.png">
+        <link rel="icon" type="png" href="{{ asset('images/small-logo.png') }}">
         <link rel="stylesheet" type="text/css" href="{{ asset('css/landing.css') }}" >
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -47,7 +47,7 @@
                     body with that of a dog-like devil named Pochita, granting him the ability to transform parts of his
                     body into chainsaws.
                 </div>
-                <a href="login.html" class="hero_title_login">
+                <a href="{{ URL::to('forgot') }}" class="hero_title_login">
                     <img src="{{ asset('interface_assets/tri.svg') }}">
                     <img src="{{ asset('interface_assets/Line.svg') }}">
                     Log In to Play

@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Geekiga Login</title>
-    <link rel="icon" type="png" href="/public/images/small-logo.png">
+    <link rel="icon" type="png" href="{{ asset('images/small-logo.png') }}">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="stylesheet" type="text/css" href="{{ asset('css/forgot.css') }}" >
     <link rel="preconnect" href="https://fonts.googleapis.com">
