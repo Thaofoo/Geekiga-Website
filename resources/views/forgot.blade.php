@@ -34,7 +34,7 @@
                 <div class="SizedBox"></div>
                 <p class="suggest">Didn't receive our email? <a href="#" class="resend">Resend</a></p>
                 <div class="SizedBox"></div>
-                <p class="suggest">Already have an account? <a href="{{ URL::to('login') }}" class="login">Login!</a></p>
+                
             </form>
         </div>
 
