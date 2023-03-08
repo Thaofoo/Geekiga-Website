@@ -1,78 +1,56 @@
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="UTF-8">
-        <title>Geekiga - Geek Out With Geekiga</title>
-        <link rel="stylesheet" type="text/css" href="{{ asset('css/home.css') }}" >
-    </head>
 
-    <body>
-        <header>
-            <h1>Geekiga - Geek Out With Geekiga</h1>
-            <nav>
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Movies</a></li>
-                    <li><a href="#">TV Shows</a></li>
-                    <li><a href="#">Categories</a></li>
-                </ul>
-            </nav>
-        </header>
+<head>
+    <title>Geekiga - Geek Out With Geekiga</title>
+    <link rel="icon" type="png" href="{{ asset('images/small-logo.png') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/home.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;600&display=swap" rel="stylesheet">
+</head>
 
-        <main>
-            <section class="hero">
-                <h2>Welcome to our streaming movie website</h2>
-                <p>Stream the latest and greatest movies and TV shows right here.</p>
-                <a href="#" class="btn">Start Watching Now</a>
-            </section>
+<body>
 
-            <section class="popular-movies">
-                <h2>Popular Movies</h2>
-                <div class="movie-list">
-                    <div class="movie">
-                        <img src="movie1.jpg" alt="Movie Title">
-                        <h3>Movie Title</h3>
-                    </div>
-                    <div class="movie">
-                        <img src="movie2.jpg" alt="Movie Title">
-                        <h3>Movie Title</h3>
-                    </div>
-                    <div class="movie">
-                        <img src="movie3.jpg" alt="Movie Title">
-                        <h3>Movie Title</h3>
-                    </div>
-                    <div class="movie">
-                        <img src="movie4.jpg" alt="Movie Title">
-                        <h3>Movie Title</h3>
-                    </div>
-                </div>
-            </section>
+    <div class="navbar_container">
+        <nav class="navbar_logged_off">
+            <div class="navbar_logged_off_left">
+                <img src="{{ asset('images/GEEKIGA LOGO.png') }}" height="30px">
+            </div>
+            <div class="navbar_logged_off_right">
+                <a href="signUp.html" class="navbar_logged_off_right_signup">
+                    <img src="{{ asset('interface_assets/Person.svg') }}" height="16px">
+                    <img src="{{ asset('interface_assets/Line.svg') }}" height="16px">
+                    Log Out
+                </a>
+            </div>
+        </nav>
+    </div>
 
-            <section class="popular-tv">
-                <h2>Popular TV Shows</h2>
-                <div class="tv-list">
-                    <div class="tv-show">
-                        <img src="tv1.jpg" alt="TV Show Title">
-                        <h3>TV Show Title</h3>
-                    </div>
-                    <div class="tv-show">
-                        <img src="tv2.jpg" alt="TV Show Title">
-                        <h3>TV Show Title</h3>
-                    </div>
-                    <div class="tv-show">
-                        <img src="tv3.jpg" alt="TV Show Title">
-                        <h3>TV Show Title</h3>
-                    </div>
-                    <div class="tv-show">
-                        <img src="tv4.jpg" alt="TV Show Title">
-                        <h3>TV Show Title</h3>
-                    </div>
-                </div>
-            </section>
-        </main>
+    <div class="hero">
+        <img src="{{ asset('interface_assets/hero_pic.png') }}" width="80%">
+        <div class="hero_title">
+            <div class="hero_title_featured">
+                Featured Show
+            </div>
+            <img class="hero_title_wall" src="{{ asset('interface_assets/hero_title.png') }}" width="750px">
+            <div class="hero_title_subdesc">
+                2023 • 11 Episodes • 1 Season
+            </div>
+            <div class="hero_title_desc">
+                Chainsaw Man follows the story of Denji, an impoverished young man who makes a contract that fuses his
+                body with that of a dog-like devil named Pochita, granting him the ability to transform parts of his
+                body into chainsaws.
+            </div>
 
-        <footer>
-            <p>&copy; 2023 Streaming Movie Website. All rights reserved.</p>
-        </footer>
-    </body>
+            </a>
+        </div>
+    </div>
+
+    <div class="tagline" style="background-image: url('{{ asset('interface_assets/tagline_bg.png') }}');">
+
+    </div>
+
+</body>
+
 </html>

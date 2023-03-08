@@ -31,7 +31,7 @@ body {
 .img-content1 {
     height: 60px;
     object-fit: contain;
-    /* biar ga keikut semisal di split screen, 
+    /* biar ga keikut semisal di split screen,
     gausa di kasi width  */
 }
 
@@ -97,7 +97,7 @@ input {
 
 }
 
-button {
+.loginbutton {
     margin-top: 15px;
     height: 45px;
     width: 100%;
