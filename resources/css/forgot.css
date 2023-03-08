@@ -120,12 +120,9 @@ button {
 
 .suggest .resend {
     color: rgb(184, 137, 33);
+    text-decoration: none;
 }
 
-.suggest .login {
-    color: rgb(184, 137, 33);
-    /* text-decoration: none; */
-}
 
 .SizedBox {
     height: 20px;
