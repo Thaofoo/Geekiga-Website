@@ -177,7 +177,7 @@ button {
 
 .forgot {
     color: rgb(184, 137, 33);
-    /* text-decoration: none; */
+    text-decoration: none;
 }
 
 .suggest {
@@ -187,5 +187,5 @@ button {
 
 .suggest .sign {
     color: rgb(184, 137, 33);
-    /* text-decoration: none; */
+    text-decoration: none;
 }
