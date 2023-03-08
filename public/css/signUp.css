@@ -10,6 +10,7 @@ html {
 body {
     font-family: 'inter', sans-serif;
     height: 100vh;
+    background-image: url("/public/interface_assets/tagline_bg.png");
     background-color: rgb(33, 16, 4);
     background-position: center;
     background-repeat: no-repeat;
@@ -30,7 +31,7 @@ body {
 .img-content1 {
     height: 60px;
     object-fit: contain;
-    /* biar ga keikut semisal di split screen,
+    /* biar ga keikut semisal di split screen, 
     gausa di kasi width  */
 }
 
@@ -168,5 +169,5 @@ button {
 
 .suggest .login {
     color: rgb(184, 137, 33);
-    /* text-decoration: none; */
+    text-decoration: none;
 }
