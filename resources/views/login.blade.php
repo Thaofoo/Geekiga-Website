@@ -27,7 +27,7 @@
                 <h3>Sign In</h3>
 
                 <!-- <label for="username">Username</label> -->
-                <input type="text" placeholder="Email or Phone" id="username">
+                <input type="text" placeholder="Email or Phone" id="username"/>;
 
                 <!-- <label for="password">Password</label> -->
                 <input type="password" placeholder="Password" id="password">
@@ -40,15 +40,15 @@
                     Login
                 </a>
 
-                <div class="or-separator"><i>or Continue with</i></div>
+                <div class="or-separator"><i>or</i></div>
                 <div class="social">
                     <div class="go"><i class="fab fa-google"></i>
-                        <img src="{{ asset('images/Google.png') }}" class="social-logo">
-                        Google
+                        <img src="{{ asset('images/Google.png') }}" class="social-logo" id="social-logo-go">
+                        Continue with Google
                     </div>
                     <div class="fb"><i class="fab fa-facebook"></i>
-                        <img src="{{ asset('images/Facebook.png') }}" class="social-logo">
-                        Facebook
+                        <img src="{{ asset('images/Facebook.png') }}" class="social-logo" id="social-logo-fb">
+                        Continue with Facebook
                     </div>
                 </div>
                 <div class="SizedBox"></div>

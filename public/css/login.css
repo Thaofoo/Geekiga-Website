@@ -8,6 +8,7 @@ html {
 }
 
 body {
+    overflow: hidden;
     font-family: 'inter', sans-serif;
     height: 100vh;
     background-image: url("/public/interface_assets/tagline_bg.png");
@@ -20,7 +21,7 @@ body {
 
 
 .container-content1 {
-    margin-top: 5vh;
+    margin-top: 6vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -52,7 +53,7 @@ form {
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    margin-top: 5vh;
+    margin-top: 6vh;
 }
 
 
@@ -70,7 +71,7 @@ form h3 {
     line-height: 42px;
     text-align: center;
     color: #ffffff;
-    padding-bottom: 33px;
+    padding-bottom: 22px;
     padding-top: 5px;
     align-items: center;
 }
@@ -88,13 +89,14 @@ input {
     display: block;
     height: 50px;
     width: 100%;
-    background-color: rgba(43, 43, 43, 0.6);
+    background-color: rgba(43, 43, 43, 0.5);
     border-radius: 30px;
     padding: 0 10px;
     margin-top: 8px;
     font-size: 14px;
     font-weight: 400;
     text-indent: 15px;
+
 }
 
 ::placeholder {
@@ -104,17 +106,16 @@ input {
 
 .loginbutton {
     background-color: rgb(112, 79, 6);
-color: #ffffff;
-width: 100%;
-height: 45px;
-font-size: 18px;
-font-weight: 300;
-cursor: pointer;
-border-radius: 30px;
-text-decoration: none;
-display: flex;
-justify-content: center;
-align-items: center;
+    color: #ffffff;
+    width: 100%;
+    height: 45px;
+    font-size: 14px;
+    font-weight: 300;
+    border-radius: 30px;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .or-separator {
@@ -136,27 +137,29 @@ align-items: center;
     font-weight: 500;
     line-height: 42px;
     width: 100%;
+    justify-content: space-between;
 }
 
 .social div {
-    width: 200px;
+    transition: 0.4s;
+    width: 210px;
     height: 40px;
     border-radius: 20px;
-    padding: 0px 0px 0px 10px;
-    color: #000000;
+    padding: 0px 0px 0px 0px;
+    color: #000000b2;
     text-align: start;
     align-items: center;
     display: flex;
     background-color: rgb(255, 255, 255);
+    justify-content: center;
+    font-size: 10px;
+    font-weight: 400;
 }
 
 .social div:hover {
+    transition: 0.4s;
     background-color: rgba(255, 255, 255, 0.599);
-}
-
-.social .fb {
-    margin-left: 25px;
-
+    cursor: pointer;
 }
 
 .social i {
@@ -169,10 +172,14 @@ align-items: center;
 }
 
 .social-logo {
-    padding-right: 10px;
+    margin-right: 6px;
     height: 25px;
     object-fit: contain;
     background-color: rgba(255, 255, 255, 0);
+}
+
+#social-logo-fb{
+    padding: 1px;
 }
 
 .reset {
@@ -182,8 +189,14 @@ align-items: center;
 }
 
 .forgot {
+    transition: 0.4s;
     color: rgb(184, 137, 33);
     text-decoration: none;
+}
+
+.forgot:hover {
+    transition: 0.4s;
+    color: rgb(138, 102, 25);
 }
 
 .suggest {
@@ -192,6 +205,13 @@ align-items: center;
 }
 
 .suggest .sign {
+    transition: 0.4s;
     color: rgb(184, 137, 33);
+    text-decoration: none;
+}
+
+.suggest .sign:hover{
+    transition: 0.4s;
+    color: rgb(138, 102, 25);
     text-decoration: none;
 }
