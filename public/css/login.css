@@ -20,11 +20,10 @@ body {
 
 
 .container-content1 {
-    padding-top: 30px;
+    margin-top: 5vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100px;
     width: auto;
 }
 
@@ -37,8 +36,8 @@ body {
 
 
 form {
-    height: 520px;
-    width: 500px;
+    height: 523px;
+    width: 514px;
     background-color: rgba(19, 19, 19, 0.588);
     position: absolute;
     transform: translate(-50%, -50%);
@@ -47,8 +46,13 @@ form {
     border-radius: 40px;
     backdrop-filter: blur(10px);
     border: 2px solid rgba(35, 35, 35, 0);
-    /* box-shadow: 0 0 40px rgba(8, 7, 16, 0); */
+    box-shadow: 0 0 40px rgba(8, 7, 16, 0);
     padding: 30px 35px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 5vh;
 }
 
 
@@ -66,7 +70,8 @@ form h3 {
     line-height: 42px;
     text-align: center;
     color: #ffffff;
-    padding-bottom: 20px;
+    padding-bottom: 33px;
+    padding-top: 5px;
     align-items: center;
 }
 
@@ -83,7 +88,7 @@ input {
     display: block;
     height: 50px;
     width: 100%;
-    background-color: rgb(43, 43, 43);
+    background-color: rgba(43, 43, 43, 0.6);
     border-radius: 30px;
     padding: 0 10px;
     margin-top: 8px;
@@ -99,15 +104,17 @@ input {
 
 .loginbutton {
     background-color: rgb(112, 79, 6);
-    color: #ffffff;
-    padding: 10px 0;
-    font-size: 18px;
-    font-weight: 300;
-    cursor: pointer;
-    border-radius: 30px;
-    padding: 10px 187px 10px 187px;
-    text-decoration: none;
-    margin-bottom: 30px;
+color: #ffffff;
+width: 100%;
+height: 45px;
+font-size: 18px;
+font-weight: 300;
+cursor: pointer;
+border-radius: 30px;
+text-decoration: none;
+display: flex;
+justify-content: center;
+align-items: center;
 }
 
 .or-separator {
@@ -128,6 +135,7 @@ input {
     font-size: 10px;
     font-weight: 500;
     line-height: 42px;
+    width: 100%;
 }
 
 .social div {
