@@ -1,43 +1,10 @@
-<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <title>Geekiga - Geek Out With Geekiga</title>
-        <link rel="icon" type="png" href="{{ asset('images/small-logo.png') }}">
-        <link rel="stylesheet" type="text/css" href="{{ asset('css/landing.css') }}" >
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;600;700;800&display=swap" rel="stylesheet">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
-    </head>
+@extends('layouts.template')
+@section('title', 'Geekiga - Geek Out With Geekiga!')
+@section('head')
+<link rel="stylesheet" type="text/css" href="{{ asset('css/landing.css') }}">
+@endsection
 
-    <body>
-
-        <div class="navbar_container">
-            <nav class="navbar_logged_off">
-                <div class="navbar_logged_off_left">
-                    <img src="{{ asset('images/GEEKIGA LOGO.png') }}" height="30px">
-                </div>
-                <div class="navbar_logged_off_right">
-                    <a href="{{ URL::to('signup') }}" class="navbar_logged_off_right_signup">
-                        <img src="{{ asset('interface_assets/Person.svg') }}" height="16px">
-                        <img src="{{ asset('interface_assets/Line.svg') }}" height="16px">
-                        Sign Up
-                    </a>
-                    or
-                    <!-- <a href="{{ URL::to('login') }}" class="navbar_logged_off_right_login">
-                        <img src="{{ asset('interface_assets/Person.svg') }}" height="16px">
-                        <img src="{{ asset('interface_assets/Line.svg') }}" height="16px">
-                        Sign In
-                    </a> -->
-                    <a href="{{ URL::to('login') }}" class="navbar_logged_off_right_login2">
-                        Sign In
-                    </a>
-                </div>
-            </nav>
-        </div>
-
+@section('content')
         <div class="hero">
             <img src="{{ asset('interface_assets/hero_pic.png') }}" width="80%">
             <div class="hero_title">
@@ -69,8 +36,7 @@
                 <div class="tagline_desc">
                     Start watching your favorite movies and shows with Geekiga now! Experience a simple and fast service, tailored just for you!
                 </div>
-            </di >
+            </div>
         </div>
+@endsection
 
-    </body>
-</html>
