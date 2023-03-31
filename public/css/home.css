@@ -107,7 +107,7 @@
     color: white;
     margin-bottom: 70px;
     display: block;
-    font-weight: 500;
+    font-weight:500;
 }
 
 .category_text{
@@ -119,8 +119,54 @@
     justify-content: space-between;
 }
 
-.contents_poster{
-    max-height: 260px;
-    width: auto;
-    border: #b888214d solid 0.5px;
+.thumbnail_clip {
+    height: 217px;
+    width: 329px;
+    background-color: #7c7972;
+    background-size: cover;
+    background-repeat: unset;
+    margin-bottom: 10px;
+    display: flex;
+}
+
+.progress_bar{
+    height: 3px;
+    width: 100%;
+    background-image: linear-gradient(to right, #b58428, #a76b20, #97531a, #853c16, #722612);
+    display: inline-block;
+    align-self: flex-end;
+}
+
+.thumbnails_container{
+    display: flex;
+}
+
+.thumbnail_segment{
+    margin-right: 30px;
+    font-weight: 700;
+}
+
+.poster_clip {
+    height: 272px;
+    width: 190px;
+    background-color: #7c7972;
+    border: #664e1b solid 1px;
+    background-size: cover;
+    background-repeat: unset;
+}
+
+
+
+
+
+
+/* Progress Bar Length */
+
+#segment-1{
+    width: 95%;
+}
+
+
+#segment-2{
+    width: 60%;
 }
