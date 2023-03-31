@@ -37,13 +37,13 @@
                         <div class="thumbnail_clip" style="background-image: linear-gradient(to top, #000000, #ffffff00), url('{{ asset('images/thumbnails/demonslayer.webp') }}')">
                         <div class="progress_bar" id="segment-1"></div>
                         </div>
-                        Demon Slayer
+                        Demon Slayer <span> •  S02 E016 </span>
                     </div>
                     <div class="thumbnail_segment">
                         <div class="thumbnail_clip" style="background-image: linear-gradient(to top, #000000, #ffffff00), url('{{ asset('images/thumbnails/gabi.jpg') }}')">
                         <div class="progress_bar" id="segment-2"></div>
                         </div>
-                        Shingeki No Kyojin
+                        Shingeki No Kyojin <span> •  S06 E01 </span>
                     </div>
                 </div>
 

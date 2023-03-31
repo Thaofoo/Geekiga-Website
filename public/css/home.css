@@ -146,6 +146,14 @@
     font-weight: 700;
 }
 
+.thumbnail_segment span{
+    margin-right: 30px;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.495);
+    margin-left: 3px;
+}
+
+
 .poster_clip {
     height: 272px;
     width: 190px;
