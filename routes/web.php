@@ -32,3 +32,7 @@ Route::get('/home', function () {
 Route::get('/forgot', function () {
     return view('forgot');
 });
+
+Route::get('/profile', function () {
+    return view('profile');
+});

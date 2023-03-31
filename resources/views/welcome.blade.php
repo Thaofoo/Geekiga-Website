@@ -1,4 +1,4 @@
-@extends('layouts.template')
+@extends('layouts.guesttemplate')
 @section('title', 'Geekiga - Geek Out With Geekiga!')
 @section('head')
 <link rel="stylesheet" type="text/css" href="{{ asset('css/landing.css') }}">

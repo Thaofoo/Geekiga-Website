@@ -3,7 +3,7 @@
     <head>
         <title>@yield('title')</title>
         <link rel="icon" type="png" href="{{ asset('images/small-logo.png') }}">
-        <link rel="stylesheet" type="text/css" href="{{ asset('css/navbar.css') }}" >
+        <link rel="stylesheet" type="text/css" href="{{ asset('css/loggednavbar.css') }}" >
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -15,7 +15,7 @@
 
     <body>
 
-        @include("layouts.navbar")
+        @include("layouts.loggednavbar")
 
         @yield('content')
 

@@ -1,0 +1,186 @@
+*,
+html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* Ini diset 0 biar enak bisa sampe pojok,
+    soalnya default bawaan tuh 2px an kayanya*/
+}
+
+body {
+    overflow: hidden;
+    height: 100vh;
+    background-image: url('../interface_assets/tagline_bg.png');
+    background-color: rgb(33, 16, 4);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow-x: hidden;
+    font-family: 'Inter', sans-serif;
+}
+
+.Container {
+    /* height: fit-content; */
+    width: 100%;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* background-color: rgba(19, 19, 19, 0.708); */
+}
+
+.box {
+    padding-top: 40px;
+    padding-left: 40px;
+    padding-right: 40px;
+    margin-top: 70px;
+    width: 60%;
+    box-sizing: border-box;
+    height: 700px;
+    background: rgb(50, 36, 10);
+    background: -moz-linear-gradient(140deg, rgba(50, 36, 10, 0.8) 0%, rgba(16, 12, 4, 1) 100%);
+    background: -webkit-linear-gradient(140deg, rgba(50, 36, 10, 0.8) 0%, rgba(16, 12, 4, 1) 100%);
+    background: linear-gradient(140deg, rgba(50, 36, 10, 0.8) 0%, rgba(16, 12, 4, 1) 100%);
+    user-select: none;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+a:link {
+    text-decoration: none;
+}
+
+#Icon {
+    height: 50px;
+    margin-left: 10px;
+}
+
+.profile-picture {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    background-color: #000000;
+    object-fit: cover;
+
+}
+
+.profile-box {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    /* background-color: aliceblue; */
+}
+
+.profile-desc {
+    color: #fafafa;
+    margin-left: 40px;
+    margin-bottom: 5px;
+    font-size: 25px;
+    font-weight: 500;
+}
+
+.profile-desc2 {
+    color: rgb(203, 153, 46);
+    margin-left: 40px;
+    margin-bottom: 10px;
+    font-size: 32px;
+    font-weight: 600;
+}
+
+.profile-column {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.button-box {
+    display: flex;
+    flex-direction: row;
+    margin-left: 40px;
+}
+
+.profile-button {
+    padding-right: 13px;
+}
+
+.profile-button .button {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 155px;
+    height: 30px;
+    border-radius: 10px;
+    border-color: transparent;
+    background-color: rgb(112, 79, 6);
+}
+
+.button:hover {
+    background: rgb(155, 111, 15);
+}
+
+.profile-button .button p {
+    text-align: center;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.detail-box {
+    margin-top: 15px;
+    margin-bottom: 40px;
+}
+
+.detail-table {
+    width: 100%;
+    margin-top: 40px;
+}
+
+.detail-desc {
+    color: #fafafa;
+    font-size: 15px;
+    font-weight: 600;
+
+}
+
+.detail-desc2 {
+    color: #bebebe;
+    margin-left: 40px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-size: 15px;
+    font-weight: 400;
+
+}
+
+.logout-box {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    width: 100%;
+}
+
+.logout-button .button {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 120px;
+    height: 40px;
+    margin-right: 20px;
+    border-radius: 10px;
+    border-color: transparent;
+    background-color: rgb(139, 29, 29);
+}
+
+.logout-button .button:hover {
+    background: rgb(209, 43, 43);
+}
+
+.logout-button .button p {
+    text-align: center;
+    color: #ececec;
+    font-size: 18px;
+    font-weight: 400;
+}
