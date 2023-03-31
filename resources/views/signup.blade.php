@@ -33,7 +33,7 @@
                 <input type="password" placeholder="Password" id="password">
                 <input type="password" placeholder="Confirm Password" id="password">
 
-                <button>Sign Up</button>
+                <a href="{{ URL::to('verification') }}" class="signup-button">Sign Up</a>
 
                 <div class="SizedBox"></div>
                 <div class="SizedBox"></div>

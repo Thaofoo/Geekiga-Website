@@ -36,3 +36,7 @@ Route::get('/forgot', function () {
 Route::get('/profile', function () {
     return view('profile');
 });
+
+Route::get('/verification', function () {
+    return view('verif');
+});

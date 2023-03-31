@@ -104,7 +104,7 @@ input {
 
 }
 
-button {
+.signup-button {
     background-color: rgb(112, 79, 6);
     color: #ffffff;
     width: 100%;
