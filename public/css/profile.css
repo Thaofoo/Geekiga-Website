@@ -10,7 +10,6 @@ html {
 body {
     overflow: hidden;
     height: 100vh;
-    background-image: url('../interface_assets/tagline_bg.png');
     background-color: rgb(33, 16, 4);
     background-position: center;
     background-repeat: no-repeat;

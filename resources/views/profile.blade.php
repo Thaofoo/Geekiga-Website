@@ -1,11 +1,11 @@
 @extends('layouts.loggedtemplate')
-@section('title', 'Geekiga - Profile')
 @section('head')
 <link rel="stylesheet" type="text/css" href="{{ asset('css/profile.css') }}">
+<title> Geekiga - {{ $title }}</title>
 @endsection
 
 @section('content')
-    <div class="Container">
+    <div class="Container" style="background-image: url('{{ asset('interface_assets/tagline_bg.png') }}')">
 
         <div class="box">
             <div class="profile-box">

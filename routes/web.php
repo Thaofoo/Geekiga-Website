@@ -26,7 +26,21 @@ Route::get('/signup', function () {
 });
 
 Route::get('/home', function () {
-    return view('home');
+    return view('home', [
+        "title" => "Home"
+    ]);
+});
+
+Route::get('/popular', function () {
+    return view('home', [
+        "title" => "Popular"
+    ]);
+});
+
+Route::get('/watchlist', function () {
+    return view('watchlist', [
+        "title" => "Watch List"
+    ]);
 });
 
 Route::get('/forgot', function () {
@@ -34,7 +48,9 @@ Route::get('/forgot', function () {
 });
 
 Route::get('/profile', function () {
-    return view('profile');
+    return view('profile', [
+        "title" => "Profile"
+    ]);
 });
 
 Route::get('/verification', function () {
