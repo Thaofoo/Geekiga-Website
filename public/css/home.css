@@ -146,6 +146,15 @@
     font-weight: 700;
 }
 
+.thumbnail_segment a{
+    text-decoration: none;
+}
+
+.thumbnail_segment a:visited{
+    text-decoration: none;
+    color: white;
+}
+
 .thumbnail_segment span{
     margin-right: 30px;
     font-weight: 500;
@@ -153,6 +162,10 @@
     margin-left: 3px;
 }
 
+.thumbnail_segment:hover .thumbnail_clip{
+    filter: contrast(110%) brightness(90%);
+
+}
 
 .poster_clip {
     height: 272px;

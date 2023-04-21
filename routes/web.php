@@ -56,3 +56,9 @@ Route::get('/profile', function () {
 Route::get('/verification', function () {
     return view('verif');
 });
+
+Route::get('/movie', function () {
+    return view('movie', [
+        "title" => "Movie"
+    ]);
+});

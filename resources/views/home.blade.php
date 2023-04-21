@@ -34,17 +34,21 @@
                 <div class="category_text">Continue Watching</div>
                 <div class="thumbnails_container">
                     <div class="thumbnail_segment">
-                        <div class="thumbnail_clip" style="background-image: linear-gradient(to top, #000000, #ffffff00), url('{{ asset('images/thumbnails/demonslayer.webp') }}')">
-                        <div class="progress_bar" id="segment-1"></div>
-                        </div>
-                        Demon Slayer <span> •  S02 E016 </span>
+                        <a href="{{ URL::to('movie') }}">
+                            <div class="thumbnail_clip" style="background-image: linear-gradient(to top, #000000, #ffffff00), url('{{ asset('images/thumbnails/demonslayer.webp') }}')">
+                            <div class="progress_bar" id="segment-1"></div>
+                            </div>
+                            Demon Slayer <span> •  S02 E016 </span>
+                        </a>
                     </div>
-                    <div class="thumbnail_segment">
-                        <div class="thumbnail_clip" style="background-image: linear-gradient(to top, #000000, #ffffff00), url('{{ asset('images/thumbnails/gabi.jpg') }}')">
-                        <div class="progress_bar" id="segment-2"></div>
+                        <div class="thumbnail_segment">
+                            <a href="{{ URL::to('movie') }}">
+                            <div class="thumbnail_clip" style="background-image: linear-gradient(to top, #000000, #ffffff00), url('{{ asset('images/thumbnails/gabi.jpg') }}')">
+                            <div class="progress_bar" id="segment-2"></div>
+                            </div>
+                            Shingeki No Kyojin <span> •  S06 E01 </span>
+                            </a>
                         </div>
-                        Shingeki No Kyojin <span> •  S06 E01 </span>
-                    </div>
                 </div>
 
             </div>
