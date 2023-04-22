@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Models\Movies;
+use Illuminate\Http\Request;
 
 /*
 |--------------------------------------------------------------------------
@@ -26,10 +27,23 @@ Route::get('/signup', function () {
     return view('signup');
 });
 
+Route::post('/signup', function (Request $request) {
+    $request->validate([
+        'fname' => "required",
+        "lname" => "required",
+        "email" => "required",
+        "password" => "required",
+        "cpassword" => "required"
+    ]);
+
+    dd($request->all());
+
+});
+
 Route::get('/home', function () {
     return view('home', [
         "title" => "Home",
-        "movie" => Movies::find("chainsaw-man-2020")
+        "movie" => Movies::where('slug', "chainsaw-man-2020")->first()
     ]);
 });
 
@@ -63,6 +77,6 @@ Route::get('/movies/{slug}', function ($slug) {
     return view('movie', [
         'name' => 'movies',
         "title" => "Movie",
-        "movie" => Movies::find($slug)
+        "movie" => Movies::where('slug', $slug)->first()
     ]);
 });

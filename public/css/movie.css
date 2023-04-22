@@ -5,6 +5,7 @@ body {
     background-size: cover;
     overflow-x: hidden;
     font-family: 'Inter', sans-serif;
+    height: 1px;
 }
 
 .movie_image{

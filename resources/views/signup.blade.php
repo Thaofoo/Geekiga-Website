@@ -23,16 +23,18 @@
             <img src="{{ asset('images/GEEKIGA LOGO.png') }}" alt="Logo" class="img-content1" />
         </div>
         <div class="form">
-            <form>
+            <form action="/signup" method="POST">
                 <h3>Sign Up</h3>
 
                 <!-- <label for="username">Username</label> -->
-                <input type="text" placeholder="First Name" id="username">
-                <input type="text" placeholder="Last Name" id="username">
-                <input type="text" placeholder="Email" id="username">
-                <input type="password" placeholder="Password" id="password">
-                <input type="password" placeholder="Confirm Password" id="password">
+                @csrf
+                <input type="text" placeholder="First Name" id="fname" name="fname" class="@error('fname') isInvalid @enderror" value="{{ old('fname') }}">
+                <input type="text" placeholder="Last Name" id="lname" name="lname" class="@error('lname') isInvalid @enderror" value="{{ old('lname') }}">
+                <input type="email" placeholder="Email" id="email" name="email" class="@error('email') isInvalid @enderror" value="{{ old('email') }}">
+                <input type="password" placeholder="Password" id="password" name="password" class="@error('password') isInvalid @enderror">
+                <input type="password" placeholder="Confirm Password" id="cpassword" name="cpassword" class="@error('cpassword') isInvalid @enderror">
 
+                <button class="signup-button" type="submit">Sign Up</button>
                 <a href="{{ URL::to('verification') }}" class="signup-button">Sign Up</a>
 
                 <div class="SizedBox"></div>

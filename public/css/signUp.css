@@ -172,3 +172,7 @@ input {
     color: rgb(138, 102, 25);
     text-decoration: none;
 }
+
+.isInvalid{
+    border: #963434 solid 1px;
+}
