@@ -163,7 +163,7 @@
 }
 
 .thumbnail_segment:hover .thumbnail_clip{
-    filter: contrast(110%) brightness(90%);
+    filter: contrast(110%) brightness(80%);
 
 }
 

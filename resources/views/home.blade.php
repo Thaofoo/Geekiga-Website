@@ -13,14 +13,12 @@
                 </div>
                 <img class="hero_title_wall" src="{{ asset('interface_assets/hero_title.png') }}" width="750px">
                 <div class="hero_title_subdesc">
-                    2023 • 11 Episodes • 1 Season
+                    {{ $movie["subdesc"] }}
                 </div>
                 <div class="hero_title_desc">
-                    Chainsaw Man follows the story of Denji, an impoverished young man who makes a contract that fuses his
-                    body with that of a dog-like devil named Pochita, granting him the ability to transform parts of his
-                    body into chainsaws.
+                    {{ $movie["desc"] }}
                 </div>
-                <a href="{{ URL::to('login') }}" class="hero_title_login">
+                <a href="{{ URL::to('/movies/chainsaw-man-2020') }}" class="hero_title_login">
                     <img src="{{ asset('interface_assets/tri.svg') }}">
                     <img src="{{ asset('interface_assets/Line.svg') }}">
                     Play Now
@@ -34,7 +32,7 @@
                 <div class="category_text">Continue Watching</div>
                 <div class="thumbnails_container">
                     <div class="thumbnail_segment">
-                        <a href="{{ URL::to('movie') }}">
+                        <a href="{{ URL::to('/movies/chainsaw-man-2020') }}">
                             <div class="thumbnail_clip" style="background-image: linear-gradient(to top, #000000, #ffffff00), url('{{ asset('images/thumbnails/demonslayer.webp') }}')">
                             <div class="progress_bar" id="segment-1"></div>
                             </div>
@@ -42,7 +40,7 @@
                         </a>
                     </div>
                         <div class="thumbnail_segment">
-                            <a href="{{ URL::to('movie') }}">
+                            <a href="{{ URL::to('/movies/shingeki-no-kyojin-2020') }}">
                             <div class="thumbnail_clip" style="background-image: linear-gradient(to top, #000000, #ffffff00), url('{{ asset('images/thumbnails/gabi.jpg') }}')">
                             <div class="progress_bar" id="segment-2"></div>
                             </div>

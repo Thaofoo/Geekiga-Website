@@ -12,12 +12,10 @@
             <img draggable="false" src="{{ asset('images/headers/aot-title.png') }}">
             <div class="movie_description">
                 <div class="movie_subdesc">
-                    2023 • 11 Episodes • 1 Season
+                    {{ $movie["subdesc"] }}
                 </div>
                 <div class="movie_desc">
-                    Chainsaw Man follows the story of Denji, an impoverished young man who makes a contract that fuses his
-                    body with that of a dog-like devil named Pochita, granting him the ability to transform parts of his
-                    body into chainsaws.
+                    {{ $movie["desc"] }}
                 </div>
                 <a href="#" class="movie_play">
                     <img src="{{ asset('interface_assets/tri.svg') }}">

@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Models\Movies;
 
 /*
 |--------------------------------------------------------------------------
@@ -27,7 +28,8 @@ Route::get('/signup', function () {
 
 Route::get('/home', function () {
     return view('home', [
-        "title" => "Home"
+        "title" => "Home",
+        "movie" => Movies::find("chainsaw-man-2020")
     ]);
 });
 
@@ -57,8 +59,10 @@ Route::get('/verification', function () {
     return view('verif');
 });
 
-Route::get('/movie', function () {
+Route::get('/movies/{slug}', function ($slug) {
     return view('movie', [
-        "title" => "Movie"
+        'name' => 'movies',
+        "title" => "Movie",
+        "movie" => Movies::find($slug)
     ]);
 });
