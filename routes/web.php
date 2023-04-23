@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Models\Movies;
+use App\Models\User;
 use Illuminate\Http\Request;
 
 /*
@@ -28,16 +29,18 @@ Route::get('/signup', function () {
 });
 
 Route::post('/signup', function (Request $request) {
-    $request->validate([
-        'fname' => "required",
-        "lname" => "required",
-        "email" => "required",
-        "password" => "required",
-        "cpassword" => "required"
+    $validated = $request->validate([
+        'fname' => "required|max:255",
+        "lname" => "required|max:255",
+        "email" => "required|email:dns|unique:users",
+        "password" => "required|min:8|max:255",
+        "cpassword" => "required|same:password"
     ]);
 
-    dd($request->all());
-
+    unset($validated['cpassword']);
+    $validated['password'] = bcrypt($validated['password']);
+    User::create($validated);
+    return redirect('/login');
 });
 
 Route::get('/home', function () {

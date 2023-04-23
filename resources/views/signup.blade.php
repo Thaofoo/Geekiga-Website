@@ -28,14 +28,38 @@
 
                 <!-- <label for="username">Username</label> -->
                 @csrf
-                <input type="text" placeholder="First Name" id="fname" name="fname" class="@error('fname') isInvalid @enderror" value="{{ old('fname') }}">
-                <input type="text" placeholder="Last Name" id="lname" name="lname" class="@error('lname') isInvalid @enderror" value="{{ old('lname') }}">
-                <input type="email" placeholder="Email" id="email" name="email" class="@error('email') isInvalid @enderror" value="{{ old('email') }}">
-                <input type="password" placeholder="Password" id="password" name="password" class="@error('password') isInvalid @enderror">
-                <input type="password" placeholder="Confirm Password" id="cpassword" name="cpassword" class="@error('cpassword') isInvalid @enderror">
+                <div class="inputwrapper">
+                    <input type="text" placeholder="First Name" id="fname" name="fname" class="@error('fname') isInvalid @enderror" value="{{ old('fname') }}">
+                    @error('fname')
+                    <div class="error_msg">{{ $message }}</div>
+                    @enderror
+                </div>
+                <div class="inputwrapper">
+                    <input type="text" placeholder="Last Name" id="lname" name="lname" class="@error('lname') isInvalid @enderror" value="{{ old('lname') }}">
+                    @error('lname')
+                    <div class="error_msg">{{ $message }}</div>
+                    @enderror
+                </div>
+                <div class="inputwrapper">
+                    <input type="email" placeholder="Email" id="email" name="email" class="@error('email') isInvalid @enderror" value="{{ old('email') }}">
+                    @error('email')
+                    <div class="error_msg">{{ $message }}</div>
+                    @enderror
+                </div>
+                <div class="inputwrapper">
+                    <input type="password" placeholder="Password" id="password" name="password" class="@error('password') isInvalid @enderror" >
+                    @error('password')
+                    <div class="error_msg">{{ $message }}</div>
+                    @enderror
+                </div>
+                <div class="inputwrapper">
+                    <input type="password" placeholder="Confirm Password" id="cpassword" name="cpassword" class="@error('cpassword') isInvalid @enderror">
+                    @error('cpassword')
+                    <div class="error_msg">{{ $message }}</div>
+                    @enderror
+                </div>
 
                 <button class="signup-button" type="submit">Sign Up</button>
-                <a href="{{ URL::to('verification') }}" class="signup-button">Sign Up</a>
 
                 <div class="SizedBox"></div>
                 <div class="SizedBox"></div>
