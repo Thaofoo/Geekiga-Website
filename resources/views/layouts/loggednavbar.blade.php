@@ -18,7 +18,7 @@
                 </div>
 
                 <div class="navbar_logged_on_mid">
-                    <img src="{{ asset('images/GEEKIGA LOGO.png') }}" height="30px">
+                    <a href="{{ URL::to('home') }}"><img src="{{ asset('images/GEEKIGA LOGO.png') }}" height="30px" draggable="false"></a>
                 </div>
 
                 <div class="navbar_logged_on_right">

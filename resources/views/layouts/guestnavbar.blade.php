@@ -1,7 +1,7 @@
 <div class="navbar_container" id="navbar">
     <nav class="navbar_logged_off">
         <div class="navbar_logged_off_left">
-            <img src="{{ asset('images/GEEKIGA LOGO.png') }}" height="30px">
+            <a href="#top"><img src="{{ asset('images/GEEKIGA LOGO.png') }}" height="30px" draggable="false"></a>
         </div>
         <div class="navbar_logged_off_right">
             <a href="{{ URL::to('signup') }}" class="navbar_logged_off_right_signup">

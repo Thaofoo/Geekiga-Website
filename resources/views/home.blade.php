@@ -6,12 +6,12 @@
 
 @section('content')
         <div class="hero">
-            <img src="{{ asset('interface_assets/hero_pic.png') }}" width="80%">
+            <img src="{{ asset('interface_assets/hero_pic.png') }}" width="80%" draggable="false">
             <div class="hero_title">
                 <div class="hero_title_featured">
                     Featured Show
                 </div>
-                <img class="hero_title_wall" src="{{ asset('interface_assets/hero_title.png') }}" width="750px">
+                <img class="hero_title_wall" src="{{ asset('interface_assets/hero_title.png') }}" width="750px" draggable="false">
                 <div class="hero_title_subdesc">
                     {{ $movie->subdesc }}
                 </div>

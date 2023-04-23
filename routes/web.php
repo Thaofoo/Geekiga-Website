@@ -52,7 +52,8 @@ Route::get('/home', function () {
 
 Route::get('/popular', function () {
     return view('home', [
-        "title" => "Popular"
+        "title" => "Popular",
+        "movie" => Movies::where('slug', "chainsaw-man-2020")->first()
     ]);
 });
 
