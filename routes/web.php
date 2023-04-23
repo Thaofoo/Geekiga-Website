@@ -4,6 +4,7 @@ use App\Models\User;
 use App\Models\Movies;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\MovieController;
 
 /*
@@ -29,20 +30,7 @@ Route::get('/signup', function () {
     return view('signup');
 });
 
-Route::post('/signup', function (Request $request) {
-    $validated = $request->validate([
-        'fname' => "required|max:255",
-        "lname" => "required|max:255",
-        "email" => "required|email:dns|unique:users",
-        "password" => "required|min:8|max:255",
-        "cpassword" => "required|same:password"
-    ]);
-
-    unset($validated['cpassword']);
-    $validated['password'] = bcrypt($validated['password']);
-    User::create($validated);
-    return redirect('/login');
-});
+Route::post('/signup', [RegisterController::class, 'store']);
 
 Route::get('/home', function () {
     return view('home', [
