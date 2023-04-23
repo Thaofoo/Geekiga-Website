@@ -23,22 +23,26 @@
             <img src="{{ asset('images/GEEKIGA LOGO.png') }}" alt="Logo" class="img-content1" />
         </div>
         <div class="form">
-            <form>
+            <form action="/login" method="POST">
+                @csrf
                 <h3>Sign In</h3>
 
                 <!-- <label for="username">Username</label> -->
-                <input type="text" placeholder="Email or Phone" id="username"/>;
+                <div class="inputwrapper">
+                    <input class="@error('email') isInvalid @enderror" type="email" placeholder="Email" id="email" name="email" autofocus required/>
+                    @error('email')
+                        <div class="error_msg">{{ $message }}</div>
+                    @enderror
+                </div>
 
                 <!-- <label for="password">Password</label> -->
-                <input type="password" placeholder="Password" id="password">
+                <input type="password" placeholder="Password" id="password" name="password" required>
 
                 <div class="reset">
                     <a href="{{ URL::to('forgot') }}" class="forgot">Forgot Your Password?</a>
                 </div>
 
-                <a class="loginbutton" href="{{ URL::to('home') }}">
-                    Login
-                </a>
+                <button class="loginbutton" type="submit">Login</button>
 
                 <div class="or-separator"><i>or</i></div>
                 <div class="social">

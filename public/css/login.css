@@ -85,7 +85,7 @@ label {
 }
 
 input {
-    color: rgb(112, 112, 112);
+    color: rgb(202, 202, 202);
     display: block;
     height: 50px;
     width: 100%;
@@ -96,7 +96,7 @@ input {
     font-size: 14px;
     font-weight: 400;
     text-indent: 15px;
-
+    margin-bottom: 15px;
 }
 
 ::placeholder {
@@ -116,6 +116,13 @@ input {
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: 0.4s;
+}
+
+.loginbutton:hover{
+    background-color: rgb(90, 63, 5);
+    cursor: pointer;
+    transition: 0.4s;
 }
 
 .or-separator {
@@ -214,4 +221,21 @@ input {
     transition: 0.4s;
     color: rgb(138, 102, 25);
     text-decoration: none;
+}
+
+.isInvalid{
+    border: #963434 solid 1px;
+}
+
+.error_msg{
+    color: #963434;
+    font-size: 11px;
+    position: absolute;
+    top: 62px;
+    left: 23px;
+}
+
+.inputwrapper{
+    position: relative;
+    width: 100%;
 }
