@@ -1,9 +1,10 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
-use App\Models\Movies;
 use App\Models\User;
+use App\Models\Movies;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\MovieController;
 
 /*
 |--------------------------------------------------------------------------
@@ -77,10 +78,4 @@ Route::get('/verification', function () {
     return view('verif');
 });
 
-Route::get('/movies/{slug}', function ($slug) {
-    return view('movie', [
-        'name' => 'movies',
-        "title" => "Movie",
-        "movie" => Movies::where('slug', $slug)->first()
-    ]);
-});
+Route::get('/movies/{slug}', [MovieController::class, 'show']);
