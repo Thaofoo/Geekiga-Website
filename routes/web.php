@@ -4,6 +4,7 @@ use App\Models\User;
 use App\Models\Movies;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\UserController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\MovieController;
 use App\Http\Controllers\RegisterController;
@@ -25,9 +26,11 @@ Route::get('/', function () {
 
 Route::get('/login', function () {
     return view('login');
-})->middleware('guest');
+})->name('login')->middleware('guest');
 
 Route::post('/login', [LoginController::class, 'authenticate'])->middleware('guest');
+
+Route::post('/logout', [LoginController::class, 'logout'])->middleware('auth');
 
 Route::get('/signup', function () {
     return view('signup');
@@ -59,11 +62,7 @@ Route::get('/forgot', function () {
     return view('forgot');
 })->middleware('guest');
 
-Route::get('/profile', function () {
-    return view('profile', [
-        "title" => "Profile"
-    ]);
-})->middleware('auth');
+Route::get('/profile', [UserController::class, 'getProfile'])->middleware('auth');
 
 Route::get('/verification', function () {
     return view('verif');

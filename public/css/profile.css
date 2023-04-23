@@ -160,7 +160,7 @@ a:link {
     width: 100%;
 }
 
-.logout-button .button {
+.logout-button{
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -171,15 +171,14 @@ a:link {
     border-radius: 10px;
     border-color: transparent;
     background-color: rgb(139, 29, 29);
-}
-
-.logout-button .button:hover {
-    background: rgb(209, 43, 43);
-}
-
-.logout-button .button p {
     text-align: center;
     color: #ececec;
     font-size: 18px;
     font-weight: 400;
 }
+
+.logout-button:hover {
+    background: rgb(209, 43, 43);
+    cursor: pointer;
+}
+

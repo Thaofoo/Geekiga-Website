@@ -15,7 +15,7 @@
                         Hello,
                     </div>
                     <div class="profile-desc2">
-                        Nathanael Erlando Putra
+                        {{ $user->fname . " " . $user->lname }}
                     </div>
                     <div class="button-box">
                         <div class="profile-button">
@@ -46,15 +46,15 @@
                 <table class="detail-table" cellspacing="8">
                     <tr>
                         <td class="detail-desc" width="25%%">First Name</td>
-                        <td class="detail-desc2">Nathanael</td>
+                        <td class="detail-desc2">{{ $user->fname }}</td>
                     </tr>
                     <tr>
                         <td class="detail-desc">Last Name</td>
-                        <td class="detail-desc2">Erlando Putra</td>
+                        <td class="detail-desc2">{{ $user->lname }}</td>
                     </tr>
                     <tr>
                         <td class="detail-desc">Email</td>
-                        <td class="detail-desc2">erlando.putra@gmail.com</td>
+                        <td class="detail-desc2">{{ $user->email }}</td>
                     </tr>
                     <tr>
                         <td class="detail-desc">Phone Number</td>
@@ -75,13 +75,12 @@
             </div>
 
             <div class="logout-box">
-                <div class="logout-button">
-                    <a href="{{ URL::to('') }}" class="logout-button">
-                        <div class="button">
-                            <p>Sign Out</p>
-                        </div>
-                    </a>
-                </div>
+                <form action="/logout" method="POST">
+                    @csrf
+                    <button class="logout-button button" type="submit">
+                        Sign Out
+                    </button>
+                </form>
             </div>
         </div>
 
