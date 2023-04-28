@@ -22,16 +22,25 @@ body {
 
 .movie_title{
     position: absolute;
-    top: 150px;
+    top: 0px;
     left: 50px;
+    height: 100vh;
 }
 
-.movie_title img{
+.movie_title_img{
     max-height: 180px;
+    max-width: 500px;
+}
+
+.movie_title_inside{
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 .movie_subdesc {
     font-size: 16px;
+    margin-top: 15px;
     margin-bottom: 5px;
     color: #ffffff;
     text-shadow: 2px 2px 20px rgba(0,0,0,1);

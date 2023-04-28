@@ -16,7 +16,7 @@ return new class extends Migration
             $table->string("title");
             $table->string("year");
             $table->string("subdesc");
-            $table->string("desc");
+            $table->text("desc");
             $table->string("slug");
             $table->string("bgimg");
             $table->string("titleimg");

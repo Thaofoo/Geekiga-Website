@@ -2,8 +2,17 @@
     top: 0px;
     left: 0px;
     margin: 0px;
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#32240a", endColorstr="#100c04", GradientType=1);
     height: 720px;
+}
+
+.hero::after {
+    position: absolute;
+    content:"";
+    height:20%;
+    width:100%;
+    top:0;
+    left:0;
+    background: linear-gradient(to bottom, rgba(34, 25, 2, 0.916) 0%,rgba(255, 0, 0, 0) 100%);
 }
 
 .hero_title {

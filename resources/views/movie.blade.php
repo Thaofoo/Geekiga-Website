@@ -7,21 +7,23 @@
 @section('content')
 
     <div class="movie">
-        <img class="movie_image" draggable="false" src="{{ asset('images/headers/aot.jpg') }}">
+        <img class="movie_image" draggable="false" src="{{ asset('images/headers/'.$movie->slug.'.png') }}">
         <div class="movie_title">
-            <img draggable="false" src="{{ asset('images/headers/aot-title.png') }}">
-            <div class="movie_description">
-                <div class="movie_subdesc">
-                    {{ $movie["subdesc"] }}
+            <div class="movie_title_inside">
+                <img class="movie_title_img" draggable="false" src="{{ asset('images/titles/'.$movie->slug.'.png') }}">
+                <div class="movie_description">
+                    <div class="movie_subdesc">
+                        {{ $movie["subdesc"] }}
+                    </div>
+                    <div class="movie_desc">
+                        {{ $movie["desc"] }}
+                    </div>
+                    <a href="#" class="movie_play">
+                        <img src="{{ asset('interface_assets/tri.svg') }}">
+                        <img src="{{ asset('interface_assets/Line.svg') }}">
+                        Play Now
+                    </a>
                 </div>
-                <div class="movie_desc">
-                    {{ $movie["desc"] }}
-                </div>
-                <a href="#" class="movie_play">
-                    <img src="{{ asset('interface_assets/tri.svg') }}">
-                    <img src="{{ asset('interface_assets/Line.svg') }}">
-                    Play Now
-                </a>
             </div>
         </div>
     </div>
