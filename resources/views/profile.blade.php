@@ -20,9 +20,9 @@
                     <div class="button-box">
                         <div class="profile-button">
                             <a href="#" class="button">
-                                <div class="button">
+                                <button onclick="showEdit()" class="button">
                                     <p>Edit profile</p>
-                                </div>
+                                </button>
                             </a>
                         </div>
 
@@ -85,4 +85,43 @@
         </div>
 
     </div>
+
+    <div class="container-edit">
+        <div>
+            <form id="profile-edit" class="hide" action="/signup" method="POST">
+                <h3>Edit Profile</h3>
+
+                <!-- <label for="username">Username</label> -->
+                @csrf
+                <div class="inputwrapper">
+                    <input type="text" placeholder="First Name" id="fname" name="fname" class="@error('fname') isInvalid @enderror" value="{{ old('fname') }}">
+                    @error('fname')
+                    <div class="error_msg">{{ $message }}</div>
+                    @enderror
+                </div>
+                <div class="inputwrapper">
+                    <input type="text" placeholder="Last Name" id="lname" name="lname" class="@error('lname') isInvalid @enderror" value="{{ old('lname') }}">
+                    @error('lname')
+                    <div class="error_msg">{{ $message }}</div>
+                    @enderror
+                </div>
+                <div class="inputwrapper">
+                    <input type="email" placeholder="Email" id="email" name="email" class="@error('email') isInvalid @enderror" value="{{ old('email') }}">
+                    @error('email')
+                    <div class="error_msg">{{ $message }}</div>
+                    @enderror
+                </div>
+
+                <div class="buttons-container">
+                    <button class="signup-button" type="submit">Save</button>
+                    <div class="cancel-button" onclick="showEdit()" type="none">Cancel</div>
+                </div>
+
+                <div class="SizedBox"></div>
+                <div class="SizedBox"></div>
+            </form>
+        </div>
+    </div>
+    <script src="{{ asset('js/profile-edit.js') }}"></script>
+
 @endsection

@@ -21,6 +21,7 @@ body {
 .Container {
     /* height: fit-content; */
     width: 100%;
+    height: 100vh;
     position: absolute;
     display: flex;
     flex-direction: column;
@@ -29,13 +30,13 @@ body {
 }
 
 .box {
-    padding-top: 40px;
-    padding-left: 40px;
-    padding-right: 40px;
+    padding-top: 50px;
+    padding-left: 50px;
+    padding-right: 50px;
     margin-top: 70px;
-    width: 60%;
+    width: 40%;
     box-sizing: border-box;
-    height: 700px;
+    height: 570px;
     background: rgb(50, 36, 10);
     background: -moz-linear-gradient(140deg, rgba(50, 36, 10, 0.8) 0%, rgba(16, 12, 4, 1) 100%);
     background: -webkit-linear-gradient(140deg, rgba(50, 36, 10, 0.8) 0%, rgba(16, 12, 4, 1) 100%);
@@ -117,6 +118,7 @@ a:link {
 
 .button:hover {
     background: rgb(155, 111, 15);
+    cursor: pointer;
 }
 
 .profile-button .button p {
@@ -180,5 +182,227 @@ a:link {
 .logout-button:hover {
     background: rgb(209, 43, 43);
     cursor: pointer;
+}
+
+/* Edit Profile Popup */
+
+.container-content1 {
+    padding-top: 6vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    width: auto;
+}
+
+.img-content1 {
+    height: 60px;
+    object-fit: contain;
+    /* biar ga keikut semisal di split screen,
+    gausa di kasi width  */
+}
+
+
+#profile-edit {
+    transition: 0.3s;
+    display: flex;
+    height: 385px;
+    width: 500px;
+    background-color: rgba(19, 19, 19, 0.888);
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 45%;
+    left: 50%;
+    border-radius: 40px;
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(35, 35, 35, 0);
+    /* box-shadow: 0 0 40px rgba(8, 7, 16, 0); */
+    padding: 25px 30px;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 6vh;
+    box-shadow: 10px 10px 400px 200px rgba(0,0,0,1);
+    -webkit-box-shadow: 10px 10px 400px 200px rgba(0,0,0,1);
+    -moz-box-shadow: 10px 10px 400px 200px rgba(0,0,0,1);
+    -webkit-transition: visibility 0.3s linear, opacity 0.3s linear;
+    -moz-transition: visibility 0.3s linear, opacity 0.3s linear;
+    -o-transition: visibility 0.3s linear, opacity 0.3s linear;
+}
+
+#profile-edit.hide{
+    visibility: hidden;
+    opacity: 0;
+}
+
+
+form * {
+    font-family: 'Inter', sans-serif;
+    color: #dddddd;
+    letter-spacing: 0.5px;
+    outline: none;
+    border: none;
+}
+
+form h3 {
+    font-size: 29px;
+    font-weight: 600;
+    line-height: 42px;
+    text-align: center;
+    color: #ffffff;
+    padding-bottom: 5px;
+    padding-top: 0px;
+    align-items: center;
+    margin-top: -5px;
+}
+
+label {
+    display: block;
+    margin-top: 30px;
+    font-size: 16px;
+    font-weight: 500;
+    color: rgb(144, 144, 144);
+}
+
+input {
+    color: rgb(205, 205, 205);
+    display: block;
+    height: 45px;
+    width: 100%;
+    background-color: rgb(43, 43, 43, 0.5);
+    border-radius: 30px;
+    padding: 0 10px;
+    margin-top: 10px;
+    font-size: 14px;
+    font-weight: 400;
+    text-indent: 15px;
+    margin-bottom: 15px;
+}
+
+::placeholder {
+    color: rgb(112, 112, 112);
+
+}
+
+.signup-button {
+    background-color: rgb(112, 79, 6);
+    color: #ffffff;
+    width: 48%;
+    height: 45px;
+    font-size: 14px;
+    font-weight: 300;
+    border-radius: 30px;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+    transition: 0.4s;
+}
+
+.signup-button:hover {
+    background-color: rgb(90, 63, 5);
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.cancel-button {
+    background-color: rgba(112, 78, 6, 0);
+    border: rgb(255, 255, 255) solid 1px;
+    color: #ffffff;
+    width: 48%;
+    height: 45px;
+    font-size: 14px;
+    font-weight: 300;
+    border-radius: 30px;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+    transition: 0.4s;
+}
+
+.cancel-button:hover {
+    background-color: rgb(90, 63, 5);
+    cursor: pointer;
+    transition: 0.4s;
+    border: rgb(90, 63, 5) solid 1px;
+}
+
+.or-separator {
+    margin-top: 20px;
+    text-align: center;
+    /* border-top: 1px solid #ccc; */
+}
+
+.or-separator i {
+    background: #ffffff00;
+    position: rergb(65, 255, 201);
+    z-index: 1;
+}
+
+.social {
+    margin-top: 20px;
+    display: flex;
+    font-size: 10px;
+    font-weight: 500;
+    line-height: 42px;
+}
+
+.social div {
+    width: 200px;
+    height: 40px;
+    border-radius: 20px;
+    padding: 0px 0px 0px 10px;
+    color: #000000;
+    text-align: start;
+    align-items: center;
+    display: flex;
+    background-color: rgb(255, 255, 255);
+}
+
+.SizedBox {
+    height: 10px;
+}
+
+.suggest {
+    text-align: center;
+    font-size: 14px;
+}
+
+.suggest .login {
+    transition: 0.4s;
+    color: rgb(184, 137, 33);
+    text-decoration: none;
+}
+
+.suggest .login:hover{
+    transition: 0.4s;
+    color: rgb(138, 102, 25);
+    text-decoration: none;
+}
+
+.isInvalid{
+    border: #963434 solid 1px;
+}
+
+.error_msg{
+    color: #963434;
+    font-size: 11px;
+    position: absolute;
+    top: 59px;
+    left: 23px;
+}
+
+.inputwrapper{
+    position: relative;
+    width: 100%;
+}
+
+.buttons-container{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
 }
 
