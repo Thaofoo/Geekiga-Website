@@ -10,6 +10,9 @@ class Genre extends Model
 {
     use HasFactory;
 
+    public $table = "Genre";
+    protected $guarded = ['id'];
+
     public function movies()
 
     {
