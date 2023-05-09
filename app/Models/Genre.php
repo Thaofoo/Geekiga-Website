@@ -2,21 +2,19 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
+use App\Models\MovieGenre;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Support\Collection;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
-
-class Movies extends Model
+class Genre extends Model
 {
     use HasFactory;
 
-    public function genres()
+    public function movies()
 
     {
 
         return $this->belongsToMany(MovieGenre::class, 'role_user');
 
     }
-
 }
