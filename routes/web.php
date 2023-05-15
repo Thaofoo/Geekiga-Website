@@ -45,12 +45,7 @@ Route::get('/home', function () {
     ]);
 })->middleware('auth');
 
-Route::get('/popular', function () {
-    return view('home', [
-        "title" => "Popular",
-        "movie" => Movies::where('slug', "chainsaw-man-2020")->first()
-    ]);
-})->middleware('auth');
+Route::get('/popular', [MovieController::class, 'showAll'])->middleware('auth');
 
 Route::get('/watchlist', function () {
     return view('watchlist', [

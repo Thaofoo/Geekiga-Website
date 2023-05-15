@@ -16,4 +16,12 @@ class MovieController extends Controller
             "movie" => Movies::where('slug', $slug)->firstOrFail()
         ]);
     }
+
+    public function showAll(){
+        return view('popular', [
+            "title" => 'Popular',
+            "movies" => Movies::all()
+        ]
+        );
+    }
 }

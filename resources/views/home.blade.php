@@ -54,39 +54,39 @@
             <div class="contents_popular category_container">
                 <div class="category_text">Popular Show</div>
                 <div class="posters_container">
-                    <div class="poster_clip" style="background-image: url('{{ asset('images/posters/Shingeki-no-kyojin-2013.png') }}')"></div>
-                    <div class="poster_clip" style="background-image: url('{{ asset('images/posters/Shingeki-no-kyojin-2013.png') }}')"></div>
-                    <div class="poster_clip" style="background-image: url('{{ asset('images/posters/Shingeki-no-kyojin-2013.png') }}')"></div>
-                    <div class="poster_clip" style="background-image: url('{{ asset('images/posters/Shingeki-no-kyojin-2013.png') }}')"></div>
-                    <div class="poster_clip" style="background-image: url('{{ asset('images/posters/Shingeki-no-kyojin-2013.png') }}')"></div>
-                    <div class="poster_clip" style="background-image: url('{{ asset('images/posters/Shingeki-no-kyojin-2013.png') }}')"></div>
-                    <div class="poster_clip" style="background-image: url('{{ asset('images/posters/Shingeki-no-kyojin-2013.png') }}')"></div>
+                    <div class="poster_clip" style="background-image: url('{{ asset('images/posters/Shingeki-no-kyojin-2013.jpg') }}')"></div>
+                    <div class="poster_clip" style="background-image: url('{{ asset('images/posters/Shingeki-no-kyojin-2013.jpg') }}')"></div>
+                    <div class="poster_clip" style="background-image: url('{{ asset('images/posters/Shingeki-no-kyojin-2013.jpg') }}')"></div>
+                    <div class="poster_clip" style="background-image: url('{{ asset('images/posters/Shingeki-no-kyojin-2013.jpg') }}')"></div>
+                    <div class="poster_clip" style="background-image: url('{{ asset('images/posters/Shingeki-no-kyojin-2013.jpg') }}')"></div>
+                    <div class="poster_clip" style="background-image: url('{{ asset('images/posters/Shingeki-no-kyojin-2013.jpg') }}')"></div>
+                    <div class="poster_clip" style="background-image: url('{{ asset('images/posters/Shingeki-no-kyojin-2013.jpg') }}')"></div>
                 </div>
             </div>
 
             <div class="contents_action category_container">
                 <div class="category_text">Action</div>
                 <div class="posters_container">
-                    <div class="poster_clip" style="background-image: url('{{ asset('images/posters/Shingeki-no-kyojin-2013.png') }}')"></div>
-                    <div class="poster_clip" style="background-image: url('{{ asset('images/posters/Shingeki-no-kyojin-2013.png') }}')"></div>
-                    <div class="poster_clip" style="background-image: url('{{ asset('images/posters/Shingeki-no-kyojin-2013.png') }}')"></div>
-                    <div class="poster_clip" style="background-image: url('{{ asset('images/posters/Shingeki-no-kyojin-2013.png') }}')"></div>
-                    <div class="poster_clip" style="background-image: url('{{ asset('images/posters/Shingeki-no-kyojin-2013.png') }}')"></div>
-                    <div class="poster_clip" style="background-image: url('{{ asset('images/posters/Shingeki-no-kyojin-2013.png') }}')"></div>
-                    <div class="poster_clip" style="background-image: url('{{ asset('images/posters/Shingeki-no-kyojin-2013.png') }}')"></div>
+                    <div class="poster_clip" style="background-image: url('{{ asset('images/posters/Shingeki-no-kyojin-2013.jpg') }}')"></div>
+                    <div class="poster_clip" style="background-image: url('{{ asset('images/posters/Shingeki-no-kyojin-2013.jpg') }}')"></div>
+                    <div class="poster_clip" style="background-image: url('{{ asset('images/posters/Shingeki-no-kyojin-2013.jpg') }}')"></div>
+                    <div class="poster_clip" style="background-image: url('{{ asset('images/posters/Shingeki-no-kyojin-2013.jpg') }}')"></div>
+                    <div class="poster_clip" style="background-image: url('{{ asset('images/posters/Shingeki-no-kyojin-2013.jpg') }}')"></div>
+                    <div class="poster_clip" style="background-image: url('{{ asset('images/posters/Shingeki-no-kyojin-2013.jpg') }}')"></div>
+                    <div class="poster_clip" style="background-image: url('{{ asset('images/posters/Shingeki-no-kyojin-2013.jpg') }}')"></div>
                 </div>
             </div>
 
             <div class="contents_Adventure category_container">
                 <div class="category_text">Adventure</div>
                 <div class="posters_container">
-                    <div class="poster_clip" style="background-image: url('{{ asset('images/posters/Shingeki-no-kyojin-2013.png') }}')"></div>
-                    <div class="poster_clip" style="background-image: url('{{ asset('images/posters/Shingeki-no-kyojin-2013.png') }}')"></div>
-                    <div class="poster_clip" style="background-image: url('{{ asset('images/posters/Shingeki-no-kyojin-2013.png') }}')"></div>
-                    <div class="poster_clip" style="background-image: url('{{ asset('images/posters/Shingeki-no-kyojin-2013.png') }}')"></div>
-                    <div class="poster_clip" style="background-image: url('{{ asset('images/posters/Shingeki-no-kyojin-2013.png') }}')"></div>
-                    <div class="poster_clip" style="background-image: url('{{ asset('images/posters/Shingeki-no-kyojin-2013.png') }}')"></div>
-                    <div class="poster_clip" style="background-image: url('{{ asset('images/posters/Shingeki-no-kyojin-2013.png') }}')"></div>
+                    <div class="poster_clip" style="background-image: url('{{ asset('images/posters/Shingeki-no-kyojin-2013.jpg') }}')"></div>
+                    <div class="poster_clip" style="background-image: url('{{ asset('images/posters/Shingeki-no-kyojin-2013.jpg') }}')"></div>
+                    <div class="poster_clip" style="background-image: url('{{ asset('images/posters/Shingeki-no-kyojin-2013.jpg') }}')"></div>
+                    <div class="poster_clip" style="background-image: url('{{ asset('images/posters/Shingeki-no-kyojin-2013.jpg') }}')"></div>
+                    <div class="poster_clip" style="background-image: url('{{ asset('images/posters/Shingeki-no-kyojin-2013.jpg') }}')"></div>
+                    <div class="poster_clip" style="background-image: url('{{ asset('images/posters/Shingeki-no-kyojin-2013.jpg') }}')"></div>
+                    <div class="poster_clip" style="background-image: url('{{ asset('images/posters/Shingeki-no-kyojin-2013.jpg') }}')"></div>
                 </div>
             </div>
         </div>

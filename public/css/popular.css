@@ -1,0 +1,19 @@
+.poster_clip {
+    height: 272px;
+    width: 190px;
+    background-color: #7c7972;
+    border: #664e1b solid 1px;
+    background-size: cover;
+    background-repeat: unset;
+}
+
+
+.posters_container {
+    margin: auto;
+    column-gap: 20px;
+    width: 95%;
+    padding-top: 80px;
+    display: grid;
+    justify-content: space-around;
+    grid-template-columns: auto auto auto auto auto auto auto ;
+}
