@@ -64,6 +64,15 @@ Route::get('/forgot', function () {
 
 Route::get('/profile', [UserController::class, 'getProfile'])->middleware('auth');
 
+Route::get('/profile/edit', function () {
+    return view('profileEdit', [
+        "title" => "Profile Edit"
+    ]);
+})->middleware('auth');
+
+Route::post('/profile', [UserController::class, 'update'])->middleware('auth');
+Route::post('/profile/edit', [UserController::class, 'update'])->middleware('auth');
+
 Route::get('/verification', function () {
     return view('verif');
 })->middleware('auth');
