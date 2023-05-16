@@ -13,12 +13,14 @@
                 <img class="movie_title_img" draggable="false" src="{{ asset('images/titles/'.$movie->slug.'.png') }}">
                 <div class="movie_description">
                     <div class="movie_subdesc">
-                        {{ $movie["subdesc"] }} • <span>{{
-
-                            
-
-
-                            }}</span>
+                        {{ $movie["subdesc"] }} •
+                            @foreach ($genres as $genre)
+                            @if ($genre != $genres->last())
+                            <a class="genre_link" href="{{ URL::to('/genre')."/".$genre->name }}">{{ trim($genre->name)."," }}</a>
+                            @else
+                            <a class="genre_link" href="{{ URL::to('/genre')."/".$genre->name }}">{{ trim($genre->name) }}</a>
+                            @endif
+                            @endforeach
                     </div>
                     <div class="movie_desc">
                         {{ $movie["desc"] }}

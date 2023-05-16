@@ -14,7 +14,8 @@ class MovieController extends Controller
         return view('movie', [
             'name' => 'movies',
             "title" => "Movie",
-            "movie" => Movies::where('slug', $slug)->firstOrFail()
+            "movie" => Movies::where('slug', $slug)->firstOrFail(),
+            "genres" => Movies::where('slug', $slug)->firstOrFail()->genres
         ]);
     }
 
@@ -26,11 +27,4 @@ class MovieController extends Controller
         );
     }
 
-    public function showGenre($name){
-        dd( view('movie', [
-            'name' => 'movies',
-            "title" => "Genre",
-            "movie" => Genre::where('name', $name)->all()
-        ]));
-    }
 }
