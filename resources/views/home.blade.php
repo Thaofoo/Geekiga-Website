@@ -32,7 +32,7 @@
                 <div class="category_text">Continue Watching</div>
                 <div class="thumbnails_container">
                     <div class="thumbnail_segment">
-                        <a href="{{ URL::to('/movies/chainsaw-man-2020') }}">
+                        <a href="{{ URL::to('/movies/kimetsu-no-yaiba-2019') }}">
                             <div class="thumbnail_clip" style="background-image: linear-gradient(to top, #000000, #ffffff00), url('{{ asset('images/thumbnails/demonslayer.webp') }}')">
                             <div class="progress_bar" id="segment-1"></div>
                             </div>
@@ -54,39 +54,27 @@
             <div class="contents_popular category_container">
                 <div class="category_text">Popular Show</div>
                 <div class="posters_container">
+                    @for ($i = 0; $i < 7; $i++)
                     <div class="poster_clip" style="background-image: url('{{ asset('images/posters/Shingeki-no-kyojin-2013.jpg') }}')"></div>
-                    <div class="poster_clip" style="background-image: url('{{ asset('images/posters/Shingeki-no-kyojin-2013.jpg') }}')"></div>
-                    <div class="poster_clip" style="background-image: url('{{ asset('images/posters/Shingeki-no-kyojin-2013.jpg') }}')"></div>
-                    <div class="poster_clip" style="background-image: url('{{ asset('images/posters/Shingeki-no-kyojin-2013.jpg') }}')"></div>
-                    <div class="poster_clip" style="background-image: url('{{ asset('images/posters/Shingeki-no-kyojin-2013.jpg') }}')"></div>
-                    <div class="poster_clip" style="background-image: url('{{ asset('images/posters/Shingeki-no-kyojin-2013.jpg') }}')"></div>
-                    <div class="poster_clip" style="background-image: url('{{ asset('images/posters/Shingeki-no-kyojin-2013.jpg') }}')"></div>
+                    @endfor
                 </div>
             </div>
 
             <div class="contents_action category_container">
                 <div class="category_text">Action</div>
                 <div class="posters_container">
+                    @for ($i = 0; $i < 7; $i++)
                     <div class="poster_clip" style="background-image: url('{{ asset('images/posters/Shingeki-no-kyojin-2013.jpg') }}')"></div>
-                    <div class="poster_clip" style="background-image: url('{{ asset('images/posters/Shingeki-no-kyojin-2013.jpg') }}')"></div>
-                    <div class="poster_clip" style="background-image: url('{{ asset('images/posters/Shingeki-no-kyojin-2013.jpg') }}')"></div>
-                    <div class="poster_clip" style="background-image: url('{{ asset('images/posters/Shingeki-no-kyojin-2013.jpg') }}')"></div>
-                    <div class="poster_clip" style="background-image: url('{{ asset('images/posters/Shingeki-no-kyojin-2013.jpg') }}')"></div>
-                    <div class="poster_clip" style="background-image: url('{{ asset('images/posters/Shingeki-no-kyojin-2013.jpg') }}')"></div>
-                    <div class="poster_clip" style="background-image: url('{{ asset('images/posters/Shingeki-no-kyojin-2013.jpg') }}')"></div>
+                    @endfor
                 </div>
             </div>
 
             <div class="contents_Adventure category_container">
                 <div class="category_text">Adventure</div>
                 <div class="posters_container">
+                    @for ($i = 0; $i < 7; $i++)
                     <div class="poster_clip" style="background-image: url('{{ asset('images/posters/Shingeki-no-kyojin-2013.jpg') }}')"></div>
-                    <div class="poster_clip" style="background-image: url('{{ asset('images/posters/Shingeki-no-kyojin-2013.jpg') }}')"></div>
-                    <div class="poster_clip" style="background-image: url('{{ asset('images/posters/Shingeki-no-kyojin-2013.jpg') }}')"></div>
-                    <div class="poster_clip" style="background-image: url('{{ asset('images/posters/Shingeki-no-kyojin-2013.jpg') }}')"></div>
-                    <div class="poster_clip" style="background-image: url('{{ asset('images/posters/Shingeki-no-kyojin-2013.jpg') }}')"></div>
-                    <div class="poster_clip" style="background-image: url('{{ asset('images/posters/Shingeki-no-kyojin-2013.jpg') }}')"></div>
-                    <div class="poster_clip" style="background-image: url('{{ asset('images/posters/Shingeki-no-kyojin-2013.jpg') }}')"></div>
+                    @endfor
                 </div>
             </div>
         </div>

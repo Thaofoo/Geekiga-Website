@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Genre;
 use App\Models\Movies;
 use Illuminate\Http\Request;
 
@@ -23,5 +24,13 @@ class MovieController extends Controller
             "movies" => Movies::all()
         ]
         );
+    }
+
+    public function showGenre($name){
+        dd( view('movie', [
+            'name' => 'movies',
+            "title" => "Genre",
+            "movie" => Genre::where('name', $name)->all()
+        ]));
     }
 }

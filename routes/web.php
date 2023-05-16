@@ -1,6 +1,7 @@
 <?php
 
 use App\Models\User;
+use App\Models\Genre;
 use App\Models\Movies;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -73,3 +74,13 @@ Route::get('/verification', function () {
 })->middleware('auth');
 
 Route::get('/movies/{slug}', [MovieController::class, 'show'])->middleware('auth');
+
+/*Route::get('/genre/{name}', [MovieController::class, 'showGenre'])->middleware('auth');*/
+
+Route::get('/genre/{name}', function (string $name) {
+    return (view('genre', [
+        "name" => $name,
+        "title" => ucfirst($name) . " Genre",
+        "movies" => Genre::where('name', $name)->firstOrFail()->movies
+    ]));
+})->middleware('auth');

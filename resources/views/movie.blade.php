@@ -13,7 +13,12 @@
                 <img class="movie_title_img" draggable="false" src="{{ asset('images/titles/'.$movie->slug.'.png') }}">
                 <div class="movie_description">
                     <div class="movie_subdesc">
-                        {{ $movie["subdesc"] }}
+                        {{ $movie["subdesc"] }} • <span>{{
+
+                            
+
+
+                            }}</span>
                     </div>
                     <div class="movie_desc">
                         {{ $movie["desc"] }}

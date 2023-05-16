@@ -5,6 +5,7 @@ namespace App\Models;
 use App\Models\MovieGenre;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 
 class Genre extends Model
 {
@@ -13,11 +14,11 @@ class Genre extends Model
     public $table = "Genre";
     protected $guarded = ['id'];
 
-    public function movies()
+    public function movies(): BelongsToMany
 
     {
 
-        return $this->belongsToMany(MovieGenre::class, 'role_user');
+        return $this->belongsToMany(Movies::class, 'movieGenre', 'genre_id', 'movie_id');
 
     }
 }
