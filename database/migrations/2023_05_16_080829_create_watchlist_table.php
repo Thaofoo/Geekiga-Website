@@ -13,9 +13,11 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('movieGenre', function (Blueprint $table) {
-            $table->unsignedInteger('movie_id')->index('movie_id');
-            $table->unsignedInteger('genre_id')->index('genre_id');
+        Schema::create('watchlist', function (Blueprint $table) {
+            $table->unsignedBigInteger('user_id');
+            $table->unsignedInteger('movie_id')->index('movieWatchlist');
+
+            $table->primary(['user_id', 'movie_id']);
         });
     }
 
@@ -26,6 +28,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('movie_genre');
+        Schema::dropIfExists('watchlist');
     }
 };

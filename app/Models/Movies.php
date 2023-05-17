@@ -20,4 +20,12 @@ class Movies extends Model
 
     }
 
+    public function watchlist(): BelongsToMany
+
+    {
+
+        return $this->belongsToMany(User::class, 'watchList', 'movie_id', 'user_id');
+
+    }
+
 }

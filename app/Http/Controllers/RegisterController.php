@@ -8,7 +8,6 @@ use Illuminate\Http\Request;
 class RegisterController extends Controller
 {
 
-    // Return satu movie berdasarkan slug
     public function store(Request $request) {
         $validated = $request->validate([
             'fname' => "required|max:255",

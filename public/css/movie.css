@@ -82,3 +82,25 @@ body {
     color: #ec9135;
 
 }
+
+.container_button{
+    display: flex;
+    align-items: center;
+}
+
+.add_logo {
+    margin-left: 20px;
+}
+
+.hidden {
+    display: none;
+}
+
+.add_button{
+    background-color: transparent;
+    border: none;
+}
+
+.add_button:hover{
+    cursor: pointer;
+}

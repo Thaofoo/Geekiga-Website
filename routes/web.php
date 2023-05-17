@@ -44,15 +44,19 @@ Route::get('/home', function () {
         "title" => "Home",
         "movie" => Movies::where('slug', "chainsaw-man-2020")->first()
     ]);
+
 })->middleware('auth');
 
 Route::get('/popular', [MovieController::class, 'showAll'])->middleware('auth');
 
 Route::get('/watchlist', function () {
     return view('watchlist', [
-        "title" => "Watch List"
+        "title" => "Watch List",
+        "movies" => Auth::user()->watchlist
     ]);
 })->middleware('auth');
+
+/*Route::get('/watchlist', [MovieController::class, 'showAll'])->middleware('auth');*/
 
 Route::get('/forgot', function () {
     return view('forgot');
@@ -74,13 +78,8 @@ Route::get('/verification', function () {
 })->middleware('auth');
 
 Route::get('/movies/{slug}', [MovieController::class, 'show'])->middleware('auth');
+Route::post('/movies/{slug}', [MovieController::class, 'watchlist'])->middleware('auth');
 
-/*Route::get('/genre/{name}', [MovieController::class, 'showGenre'])->middleware('auth');*/
 
-Route::get('/genre/{name}', function (string $name) {
-    return (view('genre', [
-        "name" => $name,
-        "title" => ucfirst($name) . " Genre",
-        "movies" => Genre::where('name', $name)->firstOrFail()->movies
-    ]));
-})->middleware('auth');
+
+Route::get('/genre/{name}', [MovieController::class, 'showMovieByGenre'])->middleware('auth');
