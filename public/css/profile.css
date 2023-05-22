@@ -264,7 +264,7 @@ label {
     color: rgb(144, 144, 144);
 }
 
-input {
+.inputprofile {
     color: rgb(205, 205, 205);
     display: block;
     height: 45px;

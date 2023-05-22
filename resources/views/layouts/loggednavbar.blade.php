@@ -22,13 +22,23 @@
                 </div>
 
                 <div class="navbar_logged_on_right">
-                    <img src="{{ asset('interface_assets/Search.svg') }}" height="18px">
+                    <div class="search">
+                        <form class="search_form" action="/search" method="POST">
+                            @csrf
+                            <input id="search_bar" class="search_hidden" placeholder="Search..." value="" name="keyword" >
+                        </form>
+                        <button id="searchButton" onclick="show_bar()"><img src="{{ asset('interface_assets/Search.svg') }}" height="18px"></button>
+                    </div>
                     <img src="{{ asset('interface_assets/Dotmenu.svg') }}" height="18px">
                     <a href="{{ URL::to('profile') }}">
                     <div class="navbar_logged_on_right_avatar"></div>
                     </a>
                 </div>
 
+
+
+
+
             </nav>
         </div>
-        <script src="{{ asset('js/scroll.js') }}"></script>
+        

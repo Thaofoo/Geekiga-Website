@@ -15,19 +15,19 @@
                     <!-- <label for="username">Username</label> -->
                     @csrf
                     <div class="inputwrapper">
-                        <input type="text" placeholder="First Name" id="fname" name="fname" class="@error('fname') isInvalid @enderror" value="{{ old('fname') }}">
+                        <input class="inputprofile" type="text" placeholder="First Name" id="fname" name="fname" class="@error('fname') isInvalid @enderror" value="{{ old('fname') }}">
                         @error('fname')
                         <div class="error_msg">{{ $message }}</div>
                         @enderror
                     </div>
                     <div class="inputwrapper">
-                        <input type="text" placeholder="Last Name" id="lname" name="lname" class="@error('lname') isInvalid @enderror" value="{{ old('lname') }}">
+                        <input class="inputprofile" type="text" placeholder="Last Name" id="lname" name="lname" class="@error('lname') isInvalid @enderror" value="{{ old('lname') }}">
                         @error('lname')
                         <div class="error_msg">{{ $message }}</div>
                         @enderror
                     </div>
                     <div class="inputwrapper">
-                        <input type="email" placeholder="Email" id="email" name="email" class="@error('email') isInvalid @enderror" value="{{ old('email') }}">
+                        <input class="inputprofile" type="email" placeholder="Email" id="email" name="email" class="@error('email') isInvalid @enderror" value="{{ old('email') }}">
                         @error('email')
                         <div class="error_msg">{{ $message }}</div>
                         @enderror

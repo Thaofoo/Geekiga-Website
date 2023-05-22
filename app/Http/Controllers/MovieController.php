@@ -41,6 +41,19 @@ class MovieController extends Controller
         );
     }
 
+    public function searchMovie(Request $request)   {
+        $movies = Movies::all();
+        if($request->keyword != ''){
+            $movies = Movies::where('title','LIKE','%'.$request->keyword.'%')->get();
+            }
+
+           return (view ('search', [
+                "movies" => $movies,
+                "name" => $request->keyword,
+                "title" => "Search"
+            ]));
+        }
+
     public function showMovieByGenre(string $name) {
         return (view('genre', [
             "name" => $name,

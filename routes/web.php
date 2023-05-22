@@ -83,3 +83,8 @@ Route::post('/movies/{slug}', [MovieController::class, 'watchlist'])->middleware
 
 
 Route::get('/genre/{name}', [MovieController::class, 'showMovieByGenre'])->middleware('auth');
+
+Route::post('/search',[MovieController::class,'searchMovie'])->middleware('auth');
+Route::get('/search',function () {
+    return redirect('/home');
+});
