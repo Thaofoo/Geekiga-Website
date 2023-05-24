@@ -7,3 +7,10 @@ function show_bar() {
      }
      ,410);
   }
+
+  document.getElementById('about_us_button').addEventListener("click", show_about)
+
+  function show_about() {
+    var x = document.getElementById('about_us');
+    x.classList.toggle("about_us_hide");
+  }

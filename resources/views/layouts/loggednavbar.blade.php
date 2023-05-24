@@ -29,16 +29,15 @@
                         </form>
                         <button id="searchButton" onclick="show_bar()"><img src="{{ asset('interface_assets/Search.svg') }}" height="18px"></button>
                     </div>
-                    <img src="{{ asset('interface_assets/Dotmenu.svg') }}" height="18px">
+                    <img src="{{ asset('interface_assets/Dotmenu.svg') }}" height="18px" id="about_us_button" >
+                    <a href="" id="about_us" onclick="show_about()" class="about_us_hide">About Us</a>
                     <a href="{{ URL::to('profile') }}">
-                    <div class="navbar_logged_on_right_avatar"></div>
+                        <div class="navbar_logged_on_right_avatar"></div>
                     </a>
                 </div>
-
-
-
-
-
             </nav>
         </div>
-        
+
+        <script src="{{ asset("js/scroll.js") }}"></script>
+        <script src="{{ asset("js/search_show.js") }}"></script>
+

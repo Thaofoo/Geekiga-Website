@@ -161,3 +161,29 @@ body {
 #searchButton:hover{
     cursor: pointer;
 }
+
+#about_us{
+    position: fixed;
+    color: white;
+    background-color: #7c797238;
+    padding-left: 25px;
+    padding-top: 10px;
+    width: 100px;
+    height: 36px;
+    top: 53px;
+    right: 21px;
+    border-radius: 1rem;
+}
+
+.about_us_hide{
+    visibility: hidden;
+}
+
+#about_us_button:hover{
+    cursor: pointer;;
+}
+
+#savebutton{
+    margin: auto;
+    margin-top: 10px;
+}

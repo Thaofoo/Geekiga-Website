@@ -62,7 +62,7 @@ Route::get('/forgot', function () {
     return view('forgot');
 })->middleware('guest');
 
-Route::get('/profile', [UserController::class, 'getProfile'])->middleware('auth');
+Route::get('/profile', [UserController::class, 'getProfile'])->middleware('auth')->name('profile');
 
 Route::get('/profile/edit', function () {
     return view('profileEdit', [
@@ -72,6 +72,7 @@ Route::get('/profile/edit', function () {
 
 Route::post('/profile', [UserController::class, 'update'])->middleware('auth');
 Route::post('/profile/edit', [UserController::class, 'update'])->middleware('auth');
+Route::get('/profile/edit2', [UserController::class, 'getProfile2'])->middleware('auth');
 
 Route::get('/verification', function () {
     return view('verif');
