@@ -29,14 +29,16 @@ class MovieController extends Controller
             "title" => "Movie",
             "movie" => Movies::where('slug', $slug)->firstOrFail(),
             "genres" => Movies::where('slug', $slug)->firstOrFail()->genres,
-            "logo" => $logo
+            "logo" => $logo,
+            "user" => Auth::user()
         ]);
     }
 
     public function showAll(){
         return view('popular', [
             "title" => 'Popular',
-            "movies" => Movies::all()
+            "movies" => Movies::all(),
+            "user" => Auth::user()
         ]
         );
     }
@@ -50,7 +52,8 @@ class MovieController extends Controller
            return (view ('search', [
                 "movies" => $movies,
                 "name" => $request->keyword,
-                "title" => "Search"
+                "title" => "Search",
+                "user" => Auth::user()
             ]));
         }
 
@@ -58,7 +61,8 @@ class MovieController extends Controller
         return (view('genre', [
             "name" => $name,
             "title" => ucfirst($name) . " Genre",
-            "movies" => Genre::where('name', $name)->firstOrFail()->movies
+            "movies" => Genre::where('name', $name)->firstOrFail()->movies,
+            "user" => Auth::user()
         ]));
     }
 

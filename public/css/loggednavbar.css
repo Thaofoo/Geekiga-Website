@@ -93,6 +93,7 @@ body {
     width: 35px;
     height: 35px;
     border-radius: 50%;
+
 }
 
 
@@ -186,4 +187,13 @@ body {
 #savebutton{
     margin: auto;
     margin-top: 10px;
+}
+
+#ppict {
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    background-color: #000000;
+    object-fit: cover;
+
 }

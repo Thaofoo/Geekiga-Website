@@ -36,8 +36,8 @@ class UserController extends Controller
         ]);
     }
 
-    public function update(Request $request)
-    {
+    public function update(Request $request){
+
         session()->flash('status', 'updating');
 
         $userId = Auth::id();
@@ -48,10 +48,19 @@ class UserController extends Controller
             'fname' => "max:255|nullable",
             "lname" => "nullable|max:255",
             "email" => "nullable|email:dns|unique:users",
-            "phone" => "unique:users"
+            "phone" => "unique:users",
+            'image' => "mimes:jpeg,png,jpg,gif,svg|max:2048"
         ]);
 
-        $input = array_filter($request->all());
+        $input = array_filter($request->except('image'));
+
+        if ($request['image'] != null){
+            $fileName = Auth::id() . '.' . $request->image->extension();
+            $request->image->storeAs('public/images/profile', $fileName);
+            $input['image'] = $fileName;
+        }
+
+
 
         $user->update($input);
         session()->flash('success', 'Profile Updated');

@@ -42,7 +42,8 @@ Route::post('/signup', [RegisterController::class, 'store'])->middleware('guest'
 Route::get('/home', function () {
     return view('home', [
         "title" => "Home",
-        "movie" => Movies::where('slug', "chainsaw-man-2020")->first()
+        "movie" => Movies::where('slug', "chainsaw-man-2020")->first(),
+        "user" => Auth::user()
     ]);
 
 })->middleware('auth');
@@ -52,7 +53,8 @@ Route::get('/popular', [MovieController::class, 'showAll'])->middleware('auth');
 Route::get('/watchlist', function () {
     return view('watchlist', [
         "title" => "Watch List",
-        "movies" => Auth::user()->watchlist
+        "movies" => Auth::user()->watchlist,
+        "user" => Auth::user()
     ]);
 })->middleware('auth');
 
