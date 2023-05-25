@@ -35,7 +35,16 @@ class MovieController extends Controller
     }
 
     public function showAll(){
-        return view('popular', [
+        return view('movies', [
+            "title" => 'Movies',
+            "movies" => Movies::all(),
+            "user" => Auth::user()
+        ]
+        );
+    }
+
+    public function showPopular(){
+        return view('movies', [
             "title" => 'Popular',
             "movies" => Movies::all(),
             "user" => Auth::user()
@@ -84,4 +93,12 @@ class MovieController extends Controller
         return redirect('/movies'.'/'.$slug);
     }
 
+    public function home() {
+        return view('home', [
+            "title" => "Home",
+            "movie" => Movies::where('slug', "chainsaw-man-2020")->first(),
+            "user" => Auth::user()
+        ]);
+
+    }
 }

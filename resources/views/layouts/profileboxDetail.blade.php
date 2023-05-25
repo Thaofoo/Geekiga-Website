@@ -1,5 +1,5 @@
 <div class="detail-box">
-                    <form method="post" action="/profile/edit" enctype="multipart/form-data">
+                    <form method="post" action="/profile" enctype="multipart/form-data">
                         @csrf
                         <input type="file" class="detail-input hidden @error('image') isInvalid @enderror" name="image"  id="image">
                         @error('image')

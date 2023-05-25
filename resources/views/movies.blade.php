@@ -1,6 +1,6 @@
 @extends('layouts.loggedtemplate')
 @section('head')
-<link rel="stylesheet" type="text/css" href="{{ asset('css/popular.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ asset('css/movies.css') }}">
 <title> Geekiga - {{ $title }}</title>
 @endsection
 
