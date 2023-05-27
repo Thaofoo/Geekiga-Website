@@ -1,0 +1,112 @@
+html{
+    font-family: 'inter';
+    background-color: rgb(23, 11, 0);
+
+}
+
+.logo{
+    margin-bottom: 20px;
+    height: 53px;
+    background-color: rgba(240, 248, 255, 0.044);
+    width: 100%;
+    padding-top: 17px;
+}
+
+.logo-img{
+    padding-left: 28px;
+    padding-right: 10px;
+}
+
+.sidebar{
+    color: rgb(196, 196, 196);
+    position: fixed;
+    height: 100%;
+    width: 24vw;
+    background-color: #201707;
+    background: rgb(26, 18, 6);
+    background: -moz-linear-gradient(120deg, rgb(26, 18, 6) 0%, rgba(42,30,10,1) 100%);
+    background: -webkit-linear-gradient(120deg, rgb(26, 18, 6) 0%, rgba(42,30,10,1) 100%);
+    background: linear-gradient(120deg, rgb(26, 18, 6) 0%, rgba(42,30,10,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#201707",endColorstr="#2a1e0a",GradientType=1);
+    left: 0px;
+    top: 0px;
+}
+
+.split-right{
+
+    margin-left: 24vw;
+}
+
+.profile{
+    color: white;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    padding-left: 28px;
+    padding-right: 10px;
+}
+
+.profile-picture{
+    height: 50px;
+    width: 50px;
+    border-radius: 75em;
+    background-color: aliceblue;
+    margin-right: 20px;
+}
+
+.profile-name{
+    font-size: larger;
+    font-weight: 500;
+}
+
+
+.profile-hr {
+    border: 0.25px solid rgba(255, 255, 255, 0.04);
+}
+
+.title{
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+.buttons{
+    display: flex;
+    flex-direction: column;
+    padding-left: 28px;
+    padding-right: 10px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-weight: 300;
+}
+
+.buttons a{
+    margin-top: 7px;
+    margin-bottom: 7px;
+    width: 95%;
+    height: 35px;
+    text-decoration: none;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.buttons a:link, a:active, a:visited{
+    color: inherit;
+}
+
+.buttons a:hover{
+    background-color: #9B2212;
+    cursor: pointer;
+}
+
+.buttons a img{
+    margin-left: 15px;
+}
+
+.buttons p{
+    margin-left: 10px;
+}
+
+.active_button{
+    background-color: #811d0f;
+}

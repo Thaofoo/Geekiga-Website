@@ -61,4 +61,8 @@ Route::get('/genre/{name}', [MovieController::class, 'showMovieByGenre'])->middl
 Route::post('/search',[MovieController::class,'searchMovie'])->middleware('auth');
 Route::get('/search',function () {return redirect('/home');});
 
-Route::get('/admin',function () {return view('admin');});
+Route::get('/admin',function () {return redirect('/admin/home');});
+Route::get('/admin/home',function () {return view('admin.home', ["title" => "Home"]);});
+Route::get('/admin/movies',[MovieController::class, 'showAllAdmin']);
+Route::get('/admin/popular',function () {return view('admin.popular', ["title" => "Popular"]);});
+Route::get('/admin/genre',function () {return view('admin.genre', ["title" => "Genre"]);});

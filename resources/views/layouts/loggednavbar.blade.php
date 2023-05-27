@@ -5,6 +5,7 @@
                     <a href="{{ URL::to('home') }}" class="navbar_logged_on_left_button {{ ($title === "Home") ? 'active_button' : '' }}" id="home_button">
                         <img src="{{ asset('interface_assets/Home.svg') }}" height="16px">
                         <div class="navbar_logged_on_left_button_text "> Home </div>
+                    </a>
 
                     <a href="{{ URL::to('popular') }}" class="navbar_logged_on_left_button {{ ($title === "Popular") ? 'active_button' : '' }}" id="popular_button">
                         <img src="{{ asset('interface_assets/Chart.svg') }}" height="16px">

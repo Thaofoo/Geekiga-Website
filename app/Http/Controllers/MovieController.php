@@ -43,6 +43,15 @@ class MovieController extends Controller
         );
     }
 
+    public function showAllAdmin(){
+        return view('admin.movies', [
+            "title" => 'Movies',
+            "movies" => Movies::all(),
+            "user" => Auth::user()
+        ]
+        );
+    }
+
     public function showPopular(){
         return view('movies', [
             "title" => 'Popular',

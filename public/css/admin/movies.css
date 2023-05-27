@@ -5,7 +5,7 @@
     border: #664e1b solid 1px;
     background-size: cover;
     background-repeat: unset;
-    margin-top: 10px;
+    margin-top: 20px;
 }
 
 
@@ -13,8 +13,8 @@
     margin: auto;
     column-gap: 20px;
     width: 95%;
-    padding-top: 80px;
+    padding-top: 56px;
     display: grid;
     justify-content: space-around;
-    grid-template-columns: auto auto auto auto auto auto auto ;
+    grid-template-columns: auto auto auto auto auto;
 }
