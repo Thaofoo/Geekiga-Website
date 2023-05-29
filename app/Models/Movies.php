@@ -12,6 +12,17 @@ class Movies extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+        'title',
+        "year",
+        "duration",
+        "desc",
+        "posterimg",
+        "headerimg",
+        "titleimg",
+        "slug"
+    ];
+
     public function genres(): BelongsToMany
 
     {

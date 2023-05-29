@@ -66,3 +66,9 @@ Route::get('/admin/home',function () {return view('admin.home', ["title" => "Hom
 Route::get('/admin/movies',[MovieController::class, 'showAllAdmin']);
 Route::get('/admin/popular',function () {return view('admin.popular', ["title" => "Popular"]);});
 Route::get('/admin/genre',function () {return view('admin.genre', ["title" => "Genre"]);});
+
+Route::get('/admin/movies/add', [MovieController::class, 'movieAddPage']);
+Route::post('/admin/movies/add', [MovieController::class, 'store']);
+Route::get('/admin/movies/{slug}', [MovieController::class, 'showAdmin']);
+Route::post('/admin/movies/{slug}/delete', [MovieController::class, 'delete']);
+Route::post('/admin/movies/{slug}/edit', [MovieController::class, 'update']);

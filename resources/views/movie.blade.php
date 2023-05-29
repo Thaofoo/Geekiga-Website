@@ -7,13 +7,13 @@
 @section('content')
 
     <div class="movie">
-        <img class="movie_image" draggable="false" src="{{ asset('images/headers/'.$movie->slug.'.png') }}">
+        <img class="movie_image" draggable="false" src="{{ asset('storage/images/header/'.$movie->headerimg) }}">
         <div class="movie_title">
             <div class="movie_title_inside">
-                <img class="movie_title_img" draggable="false" src="{{ asset('images/titles/'.$movie->slug.'.png') }}">
+                <img class="movie_title_img" draggable="false" src="{{ asset('storage/images/title/'.$movie->titleimg) }}">
                 <div class="movie_description">
                     <div class="movie_subdesc">
-                        {{ $movie["subdesc"] }} •
+                        {{ $movie->year }} • {{ $movie->duration }} •
                             @foreach ($genres as $genre)
                             @if ($genre != $genres->last())
                             <a class="genre_link" href="{{ URL::to('/genre')."/".$genre->name }}">{{ trim($genre->name)."," }}</a>
@@ -23,7 +23,7 @@
                             @endforeach
                     </div>
                     <div class="movie_desc">
-                        {{ $movie["desc"] }}
+                        {{ $movie->desc }}
                     </div>
                     <div class="container_button">
                         <a href="#" class="movie_play">

@@ -157,6 +157,7 @@
 
 .thumbnail_segment a{
     text-decoration: none;
+    color: white;
 }
 
 .thumbnail_segment a:visited{

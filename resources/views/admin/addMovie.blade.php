@@ -1,7 +1,7 @@
 @extends('layouts.admintemplate')
 @section('head')
 <link rel="stylesheet" type="text/css" href="{{ asset('css/admin/Addmovie.css') }}">
-<title> Geekiga Admin - Edit Movie</title>
+<title> Geekiga Admin - Add Movie</title>
 @endsection
 
 @section('content')
@@ -9,28 +9,28 @@
 <h1>Add Movie</h1>
 <hr>
 
-<form class="movie-form" action="/admin/movies/{{ $movie->slug }}/edit" method="POST" enctype="multipart/form-data">
+<form class="movie-form" action="/admin/movies/add" method="POST" enctype="multipart/form-data">
     @csrf
     <label for="title">Title</label>
-    <input type="text" name="title" id="title" value="{{ $movie->title }}">
+    <input type="text" name="title" id="title">
     @error('title')
     <div class="error_msg">{{ $message }}</div>
     @enderror
 
     <label for="year">Year</label>
-    <input type="text" name="year" id="year" value="{{ $movie->year }}">
+    <input type="text" name="year" id="year">
     @error('year')
     <div class="error_msg">{{ $message }}</div>
     @enderror
 
     <label for="duration">Duration</label>
-    <input type="text" name="duration" id="duration" value="{{ $movie->duration }}">
+    <input type="text" name="duration" id="duration">
     @error('duration')
     <div class="error_msg">{{ $message }}</div>
     @enderror
 
     <label for="desc">Description</label>
-    <textarea type="text" name="desc" id="desc"> {{ $movie->desc }} </textarea>
+    <textarea type="text" name="desc" id="desc"></textarea>
     @error('desc')
     <div class="error_msg">{{ $message }}</div>
     @enderror
@@ -39,7 +39,7 @@
        <ul class="genre-container">
             @foreach ($genres as $genre)
 
-            <li><div class="checkbox-container"><input {{ ($checkedGenres->contains('id', $genre->id)) ? 'checked' : '' }} type="checkbox" name="genre[]" value="{{ $genre->id }}"/> <p>{{ $genre->name }}</p> <br/></div></li>
+            <li><div class="checkbox-container"><input type="checkbox" name="genre[]" value="{{ $genre->id }}"/> <p>{{ $genre->name }}</p> <br/></div></li>
 
             @endforeach
        </ul>
@@ -66,10 +66,7 @@
     <div class="error_msg">{{ $message }}</div>
     @enderror
 
-    <button class="button" type="submit">Update Movie</button>
+    <button class="button" type="submit">Add Movie</button>
 </form>
-<form action="/admin/movies/{{ $movie->slug }}/delete" method="POST">
-    @csrf
-    <button class="button delete-button" type="submit" onclick="return confirm('Are you sure?')">Delete Movie</button>
-</form>
+
 @endsection
