@@ -287,4 +287,13 @@ class MovieController extends Controller
         return redirect('/admin/movies/');
 
     }
+
+    public function popularAdmin(){
+        return view('admin.popular', [
+            "title" => 'Popular',
+            "movies" => Movies::where('popular', 1)->get(),
+        ]
+        );
+    }
 }
+

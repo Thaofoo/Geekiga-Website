@@ -11,6 +11,7 @@ use App\Http\Controllers\LoginController;
 use App\Http\Controllers\MovieController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\WatchListController;
+use App\Http\Controllers\PopularController;
 
 /*
 |--------------------------------------------------------------------------
@@ -69,13 +70,20 @@ Route::middleware('auth')->group(function () {
 Route::middleware('admin')->group(function () {
     Route::get('/admin',function () {return redirect('/admin/home');});
     Route::get('/admin/home',function () {return view('admin.home', ["title" => "Home"]);});
+
     Route::get('/admin/movies',[MovieController::class, 'showAllAdmin']);
     Route::get('/admin/movies/add', [MovieController::class, 'movieAddPage']);
     Route::post('/admin/movies/add', [MovieController::class, 'store']);
     Route::get('/admin/movies/{slug}', [MovieController::class, 'showAdmin']);
     Route::post('/admin/movies/{slug}/delete', [MovieController::class, 'delete']);
     Route::post('/admin/movies/{slug}/edit', [MovieController::class, 'update']);
-    Route::get('/admin/popular',function () {return view('admin.popular', ["title" => "Popular"]);});
+
+    Route::get('/admin/popular', [MovieController::class, 'popularAdmin']);
+    Route::get('/admin/popular/add', [PopularController::class, 'add']);
+    Route::post('/admin/popular/add', [PopularController::class, 'update']);
+    Route::get('/admin/popular/delete', [PopularController::class, 'remove']);
+    Route::post('/admin/popular/delete', [PopularController::class, 'update']);
+
     Route::get('/admin/genre', [GenreController::class, 'showAll']);
     Route::get('/admin/genre/add', [GenreController::class, 'addGenre']);
     Route::post('/admin/genre/add', [GenreController::class, 'storeGenre']);
