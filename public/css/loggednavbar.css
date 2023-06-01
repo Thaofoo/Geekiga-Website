@@ -7,7 +7,14 @@ body {
     background: -webkit-linear-gradient(140deg, rgba(50, 36, 10, 1) 0%, rgba(16, 12, 4, 1) 100%);
     background: linear-gradient(140deg, rgba(50, 36, 10, 1) 0%, rgba(16, 12, 4, 1) 100%);
     user-select: none;
+    overscroll-behavior-y: none;
 }
+
+html{
+    overscroll-behavior-y: none;
+}
+
+
 
 #searchButton {
     background-color: #7c7972;

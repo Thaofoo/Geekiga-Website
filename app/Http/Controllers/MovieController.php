@@ -121,7 +121,9 @@ class MovieController extends Controller
         return view('home', [
             "title" => "Home",
             "movie" => Movies::where('slug', "chainsaw-man-2020")->first(),
-            "user" => Auth::user()
+            "user" => Auth::user(),
+            "genres" => Genre::all(),
+
         ]);
 
     }

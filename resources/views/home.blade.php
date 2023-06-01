@@ -54,29 +54,32 @@
             <div class="contents_popular category_container">
                 <div class="category_text">Popular Show</div>
                 <div class="posters_container">
-                    @for ($i = 0; $i < 7; $i++)
-                    <div class="poster_clip" style="background-image: url('{{ asset('images/posters/Shingeki-no-kyojin-2013.jpg') }}')"></div>
-                    @endfor
+
+                    @php
+                        $popularMovies = \App\Models\Movies::where('popular', 1)->get()
+                    @endphp
+
+                    @foreach ($popularMovies as $movie)
+
+                    <a href="{{ URL::to("/movies/".$movie->slug) }}" class="poster_clip" style="background-image: url('{{ asset('storage/images/poster/'.$movie->posterimg) }}')"></a>
+
+                    @endforeach
+
                 </div>
             </div>
 
-            <div class="contents_action category_container">
-                <div class="category_text">Action</div>
+            @foreach ($genres as $genre)
+            <div class="contents_{{ $genre->slug }} category_container">
+                <div class="category_text">{{ $genre->name }}</div>
                 <div class="posters_container">
-                    @for ($i = 0; $i < 7; $i++)
-                    <div class="poster_clip" style="background-image: url('{{ asset('images/posters/Shingeki-no-kyojin-2013.jpg') }}')"></div>
-                    @endfor
-                </div>
-            </div>
+                    @foreach ($genre->movies as $movie)
 
-            <div class="contents_Adventure category_container">
-                <div class="category_text">Adventure</div>
-                <div class="posters_container">
-                    @for ($i = 0; $i < 7; $i++)
-                    <div class="poster_clip" style="background-image: url('{{ asset('images/posters/Shingeki-no-kyojin-2013.jpg') }}')"></div>
-                    @endfor
+                    <a href="{{ URL::to("/movies/".$movie->slug) }}" class="poster_clip" style="background-image: url('{{ asset('storage/images/poster/'.$movie->posterimg) }}')"></a>
+
+                    @endforeach
                 </div>
             </div>
+            @endforeach
         </div>
 @endsection
 

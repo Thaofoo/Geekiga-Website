@@ -11,14 +11,26 @@
                         <img src="{{ asset('interface_assets/Chart.svg') }}" height="16px">
                         <div class="navbar_logged_on_left_button_text"> Popular </div>
                     </a>
+
+                    @if ($user->admin == 0)
                     <a href="{{ URL::to('watchlist') }}" class="navbar_logged_on_left_button {{ ($title === "Watch List") ? 'active_button' : '' }}" id="watchlist_button">
                         <img src="{{ asset('interface_assets/Watchlist.svg') }}" height="16px">
                         <div class="navbar_logged_on_left_button_text" > Watch List </div>
                     </a>
+                    @endif
+
+
                     <a href="{{ URL::to('movies') }}" class="navbar_logged_on_left_button {{ ($title === "Movies") ? 'active_button' : '' }}" id="movies_button">
                         <img src="{{ asset('interface_assets/movie.svg') }}" height="16px">
                         <div class="navbar_logged_on_left_button_text" > Movies </div>
                     </a>
+
+                    @if ($user->admin == 1)
+                    <a href="/admin" class="navbar_logged_on_left_button" id="admin_button">
+                        <img src="{{ asset('interface_assets/back_door.svg') }}" height="16px">
+                        <div class="navbar_logged_on_left_button_text" > Admin Panel </div>
+                    </a>
+                    @endif
 
                 </div>
 

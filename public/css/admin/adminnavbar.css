@@ -78,6 +78,8 @@ html{
     margin-top: 10px;
     margin-bottom: 20px;
     font-weight: 300;
+    justify-content: space-between;
+    height: 65vh;
 }
 
 .buttons a{

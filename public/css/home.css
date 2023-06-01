@@ -123,11 +123,6 @@
     margin-bottom: 13px;
 }
 
-.posters_container{
-    display: flex;
-    justify-content: space-between;
-}
-
 .thumbnail_clip {
     height: 217px;
     width: 329px;
@@ -184,6 +179,8 @@
     border: #664e1b solid 1px;
     background-size: cover;
     background-repeat: unset;
+    display: inline-block;
+    margin-right: 15px;
 }
 
 
