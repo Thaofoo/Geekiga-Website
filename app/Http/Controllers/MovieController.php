@@ -237,9 +237,10 @@ class MovieController extends Controller
             $input['titleimg'] = $fileName;
         }
 
-        if ($request['genre' != null]) {
+        if ($request['genre'] != null) {
+
             $movieID = $movie->id;
-            MovieGenre::where('slug', $slug)->firstOrFail()->delete();
+            MovieGenre::where('movie_id', $movieID)->delete();
             foreach ($request['genre'] as $genre) {
                 $inputGenre = [
                     "movie_id" => $movieID,

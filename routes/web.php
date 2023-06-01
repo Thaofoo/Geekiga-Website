@@ -76,8 +76,11 @@ Route::middleware('admin')->group(function () {
     Route::post('/admin/movies/{slug}/delete', [MovieController::class, 'delete']);
     Route::post('/admin/movies/{slug}/edit', [MovieController::class, 'update']);
     Route::get('/admin/popular',function () {return view('admin.popular', ["title" => "Popular"]);});
-    Route::get('/admin/genre',[GenreController::class, 'showAll']);
+    Route::get('/admin/genre', [GenreController::class, 'showAll']);
+    Route::get('/admin/genre/add', [GenreController::class, 'addGenre']);
+    Route::post('/admin/genre/add', [GenreController::class, 'storeGenre']);
     Route::get('/admin/genre/{slug}', [GenreController::class, 'show']);
+    Route::post('/admin/genre/{slug}', [GenreController::class, 'deleteGenre']);
     Route::get('/admin/genre/{slug}/add', [GenreController::class, 'addMovie']);
     Route::post('/admin/genre/{slug}/add', [GenreController::class, 'storeMovie']);
 

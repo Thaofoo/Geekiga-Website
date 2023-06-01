@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Genre;
 use App\Models\Movies;
 use App\Models\MovieGenre;
+use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 
 class GenreController extends Controller
@@ -40,4 +41,31 @@ class GenreController extends Controller
         MovieGenre::create($inputGenre);
         return redirect('/admin/genre/'.$slug);
     }
+
+    public function addGenre(){
+        return view('admin.addGenre', [
+            "title" => "Genre",
+        ]);
+    }
+
+    public function storeGenre(Request $request){
+
+        $validated = $request->validate([
+            "name" => "max:255|unique:genre"
+        ]);
+        $input = [
+            "name" => ucwords($request->name),
+            "slug" => Str::slug($request->name)
+        ];
+        Genre::create($input);
+    }
+
+    public function deleteGenre(Request $request, $slug){
+        $genre_id = Genre::where('slug', $slug)->firstOrFail()->id;
+        MovieGenre::where('genre_id', $genre_id)->delete();
+        Genre::find($genre_id)->delete();
+        return redirect("/admin/genre");
+    }
+
+
 }

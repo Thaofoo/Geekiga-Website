@@ -21,12 +21,18 @@ hr{
 }
 
 .genre-container li a{
-    display: inline-block;
+    display: flex;
     background-color:#9B2212;
-    width: 130px;
+    width: 150px;
     padding-top: 6px;
     padding-bottom: 6px;
     border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.genre-container li a img{
+    margin-right: 10px;
 }
 
 .genre-container li a:hover{
@@ -38,6 +44,7 @@ hr{
     color: white;
     font-weight: 300;
 }
+
 
 
 

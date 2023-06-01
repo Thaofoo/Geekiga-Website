@@ -30,6 +30,10 @@ hr{
     grid-template-columns: auto auto auto auto auto;
 }
 
+.button-container{
+    display: inline-block;
+}
+
 .button {
     color: white;
     background-color: #9B2212;
@@ -42,10 +46,12 @@ hr{
     display: flex;
     align-items: center;
     font-weight: 200;
+    border: none;
 }
 
 .button:hover{
     background-color: #56140b;
+    cursor: pointer;
 }
 
 .button:active, .button:visited{

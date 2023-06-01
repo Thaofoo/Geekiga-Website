@@ -20,6 +20,12 @@
     </li>
 
     @endforeach
+
+    <li>
+        <a class="genre-link" href="{{ URL::to("/admin/genre/add") }}">
+            <img src="{{ asset('interface_assets/genre_add.svg') }}" height="15px"> Add Genre
+        </a>
+    </li>
 </ul>
 
 @endsection
