@@ -18,6 +18,12 @@ body {
     font-family: 'Inter', sans-serif;
 }
 
+h1{
+    text-align: center;
+    color: white;
+    margin-top: 15px;
+}
+
 .Container {
     /* height: fit-content; */
     width: 100%;
@@ -109,7 +115,7 @@ a:link {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 155px;
+    width: fit-content;
     height: 30px;
     border-radius: 10px;
     border-color: transparent;
@@ -431,6 +437,12 @@ label {
 
 #edit-button{
     color: white;
+    display: inline-block;
+    text-align: center;
+    padding-top: 5px;
+    padding-left: 25px;
+    padding-right: 25px;
+    margin-right: 10px;
 }
 
 #image{
@@ -470,3 +482,19 @@ label {
     background: rgb(155, 111, 15);
 }
 
+.alert{
+    text-align: center;
+}
+
+.alert-success{
+    color: rgb(28, 98, 28);
+}
+
+.alert-danger{
+    color: #963434;;
+}
+
+.profile-alert{
+    margin-top: 20px;
+    margin-bottom: -30px;
+}

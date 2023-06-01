@@ -211,6 +211,8 @@ class MovieController extends Controller
             "genre" => ""
         ]);
 
+
+
         $movie = Movies::where('slug', $slug)->firstOrFail();
         $input = array_filter($request->except(['poster', 'header', 'titleImg', 'genre']));
 
@@ -251,6 +253,7 @@ class MovieController extends Controller
                 MovieGenre::create($inputGenre);
             }
         }
+
 
         $movie->update($input);
 
@@ -296,6 +299,14 @@ class MovieController extends Controller
             "movies" => Movies::where('popular', 1)->get(),
         ]
         );
+    }
+
+    public function play($slug){
+        return view('play', [
+            "title" => 'Movies',
+            "movie" => Movies::where('slug', $slug)->firstOrFail(),
+            "user" => Auth::user()
+        ]);
     }
 }
 

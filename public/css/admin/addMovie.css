@@ -114,7 +114,6 @@ background: rgb(155, 111, 15);
     display: inline-block;
 }
 
-
 .checkbox-container input{
     width: 15px;
     margin: 0px;
@@ -148,4 +147,8 @@ background: rgb(155, 111, 15);
 
 #select-label{
     margin-bottom: 15px;
+}
+
+.button-container img{
+    margin-right: 10px;
 }

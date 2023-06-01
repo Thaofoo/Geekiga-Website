@@ -21,6 +21,9 @@ class LoginController extends Controller
         if (Auth::attempt($credentials)) {
             $request->session()->regenerate();
 
+            if(Auth::user()->email_verified_at == null){
+                return redirect()->intended('/home')->with('unverified', 'Email is not verified. Please verify your email in profile page');
+            }
             return redirect()->intended('/home');
         }
 

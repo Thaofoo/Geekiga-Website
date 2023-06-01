@@ -10,7 +10,7 @@
                                 <td class="detail-desc" width="25%%">First Name</td>
                                 <td class="detail-desc2">{{ $user->fname }}</td>
                                 <td class="detail-input hidden">
-                                    <input class="inputprofile" type="text" placeholder="{{ $user->fname }}" id="fname" name="fname" class="@error('fname') isInvalid @enderror" value="{{ old('fname') }}">
+                                    <input class="inputprofile @error('fname') isInvalid @enderror" type="text" placeholder="{{ $user->fname }}" id="fname" name="fname" value="{{ old('fname') }}">
                                     @error('fname')
                                     <div class="error_msg">{{ $message }}</div>
                                     @enderror
@@ -21,7 +21,7 @@
                                 <td class="detail-desc">Last Name</td>
                                 <td class="detail-desc2">{{ $user->lname }}</td>
                                 <td class="detail-input hidden">
-                                    <input class="inputprofile" type="text" placeholder="{{ $user->lname }}" id="lname" name="lname" class="@error('lname') isInvalid @enderror" value="{{ old('lname') }}">
+                                    <input class="inputprofile @error('lname') isInvalid @enderror" type="text" placeholder="{{ $user->lname }}" id="lname" name="lname" value="{{ old('lname') }}">
                                     @error('lname')
                                     <div class="error_msg">{{ $message }}</div>
                                     @enderror
@@ -31,7 +31,7 @@
                                 <td class="detail-desc">Email</td>
                                 <td class="detail-desc2">{{ $user->email }}</td>
                                 <td class="detail-input hidden">
-                                    <input class="inputprofile" type="email" placeholder="{{ $user->email }}" id="email" name="email" class="@error('email') isInvalid @enderror" value="{{ old('email') }}">
+                                    <input class="inputprofile @error('email') isInvalid @enderror" type="email" placeholder="{{ $user->email }}" id="email" name="email" value="{{ old('email') }}">
                                     @error('email')
                                     <div class="error_msg">{{ $message }}</div>
                                     @enderror
@@ -41,7 +41,7 @@
                                 <td class="detail-desc">Phone Number</td>
                                 <td class="detail-desc2">{{ $user->phone }}</td>
                                 <td class="detail-input hidden">
-                                    <input class="inputprofile" type="text" placeholder="{{ $user->phone }}" id="phone" name="phone" class="@error('lname') isInvalid @enderror" value="{{ old('phone') }}">
+                                    <input class="inputprofile @error('phone') isInvalid @enderror" type="text" placeholder="{{ $user->phone }}" id="phone" name="phone" value="{{ old('phone') }}">
 
                                 </td>
                             </tr>

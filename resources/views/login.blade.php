@@ -50,10 +50,6 @@
                         <img src="{{ asset('images/Google.png') }}" class="social-logo" id="social-logo-go">
                         Continue with Google
                     </div>
-                    <div class="fb"><i class="fab fa-facebook"></i>
-                        <img src="{{ asset('images/Facebook.png') }}" class="social-logo" id="social-logo-fb">
-                        Continue with Facebook
-                    </div>
                 </div>
                 <div class="SizedBox"></div>
                 <div class="SizedBox"></div>

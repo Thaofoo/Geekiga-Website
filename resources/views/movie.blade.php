@@ -26,7 +26,7 @@
                         {{ $movie->desc }}
                     </div>
                     <div class="container_button">
-                        <a href="#" class="movie_play">
+                        <a href="/movies/{{ $movie->slug }}/play" class="movie_play">
                             <img src="{{ asset('interface_assets/tri.svg') }}">
                             <img src="{{ asset('interface_assets/Line.svg') }}">
                             Play Now

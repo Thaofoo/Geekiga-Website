@@ -28,6 +28,10 @@
                                     Edit Profile
                                 </a>
 
+                                <a class="button" id="edit-button" href="{{ URL::to("/profile/change-password") }}">
+                                    Change Password
+                                </a>
+
                         </div>
                     </div>
 
@@ -40,6 +44,10 @@
 
                 @if (session()->has('success'))
 
+                <div class="alert alert-success profile-alert" role="alert">
+                    Profile changed sucessfully
+                </div>
+
                 @include('layouts.profileboxDetail')
 
                 @elseif (session()->has('status'))
@@ -47,7 +55,11 @@
                 @include('layouts.profileboxInput')
 
                 @else
-
+                @if (session('cpass'))
+                <div class="alert alert-success profile-alert" role="alert">
+                    {{ session('cpass') }}
+                </div>
+                @endif
                 @include('layouts.profileboxDetail')
 
                 @endif

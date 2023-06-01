@@ -49,6 +49,8 @@ Route::middleware('auth')->group(function () {
 
     Route::get('/profile', [UserController::class, 'getProfile'])->middleware('auth')->name('profile');
     Route::post('/profile', [UserController::class, 'update'])->middleware('auth');
+    Route::get('/profile/change-password', [UserController::class, 'changePassword'])->middleware('auth');
+    Route::post('/profile/change-password', [UserController::class, 'updatePassword'])->middleware('auth');
 
     //Unused Route
     //Route::get('/profile/edit', function () {return view('profileEdit', ["title" => "Profile Edit"]);})->middleware('auth');
@@ -60,6 +62,7 @@ Route::middleware('auth')->group(function () {
     Route::get('/movies', [MovieController::class, 'showAll'])->middleware('auth');
     Route::get('/movies/{slug}', [MovieController::class, 'show'])->middleware('auth');
     Route::post('/movies/{slug}', [MovieController::class, 'watchlist'])->middleware('auth');
+    Route::get('/movies/{slug}/play', [MovieController::class, 'play'])->middleware('auth');
 
     Route::get('/genre/{name}', [MovieController::class, 'showMovieByGenre'])->middleware('auth');
 

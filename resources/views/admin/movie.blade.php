@@ -9,6 +9,12 @@
 <h1>Add Movie</h1>
 <hr>
 
+<div class="button-container">
+    <a href="{{ URL::to("/movies/" . $movie->slug) }}" class="button add-movie">
+        <img src="{{ asset('interface_assets/movie.svg') }}" height="16px"> <p>Client Version</p>
+    </a>
+</div>
+
 <form class="movie-form" action="/admin/movies/{{ $movie->slug }}/edit" method="POST" enctype="multipart/form-data">
     @csrf
     <label for="title">Title</label>
@@ -32,6 +38,12 @@
     <label for="desc">Description</label>
     <textarea type="text" name="desc" id="desc"> {{ $movie->desc }} </textarea>
     @error('desc')
+    <div class="error_msg">{{ $message }}</div>
+    @enderror
+
+    <label for="videolink">Video Link</label>
+    <input type="text" name="videolink" id="videolink" value="{{ $movie->videolink }}">
+    @error('videolink')
     <div class="error_msg">{{ $message }}</div>
     @enderror
 

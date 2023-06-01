@@ -5,6 +5,11 @@
 @endsection
 
 @section('content')
+@if (session('unverified'))
+    <div class="alert alert-success" role="alert">
+        {{ session('unverivied') }}
+    </div>
+@endif
         <div class="hero">
             <img src="{{ asset('interface_assets/hero_pic.png') }}" width="80%" draggable="false">
             <div class="hero_title">

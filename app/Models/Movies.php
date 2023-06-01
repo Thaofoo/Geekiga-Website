@@ -20,7 +20,8 @@ class Movies extends Model
         "posterimg",
         "headerimg",
         "titleimg",
-        "slug"
+        "slug",
+        "videolink"
     ];
 
     public function genres(): BelongsToMany
