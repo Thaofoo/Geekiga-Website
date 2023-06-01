@@ -30,7 +30,7 @@ class MovieController extends Controller
 
         return view('movie', [
             'name' => 'movies',
-            "title" => "Movie",
+            "title" => "Movies",
             "movie" => Movies::where('slug', $slug)->firstOrFail(),
             "genres" => Movies::where('slug', $slug)->firstOrFail()->genres,
             "logo" => $logo,

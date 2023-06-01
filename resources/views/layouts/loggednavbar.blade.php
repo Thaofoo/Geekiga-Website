@@ -38,7 +38,12 @@
                     <a href="" id="about_us" onclick="show_about()" class="about_us_hide">About Us</a>
                     <a href="{{ URL::to('profile') }}">
                         <div class="navbar_logged_on_right_avatar">
+                            @if ($user->image != null)
                             <img id="ppict" src="{{ asset('storage/images/profile/'.$user->image) }}">
+                            @else
+                            <img id="ppict" src="{{ asset('interface_assets/default.webp') }}">
+                            @endif
+
                         </div>
                     </a>
                 </div>

@@ -21,54 +21,62 @@ use App\Http\Controllers\WatchListController;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+Route::middleware('guest')->group(function () {
+    Route::get('/', function () {return view('welcome');});
 
-Route::get('/', function () {return view('welcome');})->middleware('guest');
+    Route::get('/login', function () {return view('login');})->name('login');
+    Route::post('/login', [LoginController::class, 'authenticate']);
 
-Route::get('/login', function () {return view('login');})->name('login')->middleware('guest');
-Route::post('/login', [LoginController::class, 'authenticate'])->middleware('guest');
-Route::post('/logout', [LoginController::class, 'logout'])->middleware('auth');
+    Route::get('/signup', function () {return view('signup');});
+    Route::post('/signup', [RegisterController::class, 'store']);
 
-Route::get('/signup', function () {return view('signup');})->middleware('guest');
-Route::post('/signup', [RegisterController::class, 'store'])->middleware('guest');
+    Route::get('/forgot', function () {return view('forgot');});
+});
 
-Route::get('/home', [MovieController::class, 'home'])->middleware('auth');
+Route::middleware('auth')->group(function () {
+    Route::post('/logout', [LoginController::class, 'logout'])->middleware('auth');
 
-Route::get('/popular', [MovieController::class, 'showPopular'])->middleware('auth');
+    Route::get('/home', [MovieController::class, 'home'])->middleware('auth');
 
-Route::get('/watchlist', [WatchListController::class, 'show'])->middleware('auth');
+    Route::get('/popular', [MovieController::class, 'showPopular'])->middleware('auth');
 
-//Unused Route
-/*Route::get('/watchlist', [MovieController::class, 'showAll'])->middleware('auth');*/
+    Route::get('/watchlist', [WatchListController::class, 'show'])->middleware('auth');
 
-Route::get('/forgot', function () {return view('forgot');})->middleware('guest');
+    //Unused Route
+    /*Route::get('/watchlist', [MovieController::class, 'showAll'])->middleware('auth');*/
 
-Route::get('/profile', [UserController::class, 'getProfile'])->middleware('auth')->name('profile');
-Route::post('/profile', [UserController::class, 'update'])->middleware('auth');
+    Route::get('/profile', [UserController::class, 'getProfile'])->middleware('auth')->name('profile');
+    Route::post('/profile', [UserController::class, 'update'])->middleware('auth');
 
-//Unused Route
-//Route::get('/profile/edit', function () {return view('profileEdit', ["title" => "Profile Edit"]);})->middleware('auth');
-//Route::post('/profile/edit', [UserController::class, 'update'])->middleware('auth');
-//Route::get('/profile/edit2', [UserController::class, 'getProfile2'])->middleware('auth');
+    //Unused Route
+    //Route::get('/profile/edit', function () {return view('profileEdit', ["title" => "Profile Edit"]);})->middleware('auth');
+    //Route::post('/profile/edit', [UserController::class, 'update'])->middleware('auth');
+    //Route::get('/profile/edit2', [UserController::class, 'getProfile2'])->middleware('auth');
 
-Route::get('/verification', function () {return view('verif');})->middleware('auth');
+    Route::get('/verification', function () {return view('verif');})->middleware('auth');
 
-Route::get('/movies', [MovieController::class, 'showAll'])->middleware('auth');
-Route::get('/movies/{slug}', [MovieController::class, 'show'])->middleware('auth');
-Route::post('/movies/{slug}', [MovieController::class, 'watchlist'])->middleware('auth');
+    Route::get('/movies', [MovieController::class, 'showAll'])->middleware('auth');
+    Route::get('/movies/{slug}', [MovieController::class, 'show'])->middleware('auth');
+    Route::post('/movies/{slug}', [MovieController::class, 'watchlist'])->middleware('auth');
 
-Route::get('/genre/{name}', [MovieController::class, 'showMovieByGenre'])->middleware('auth');
+    Route::get('/genre/{name}', [MovieController::class, 'showMovieByGenre'])->middleware('auth');
 
-Route::post('/search',[MovieController::class,'searchMovie'])->middleware('auth');
-Route::get('/search',function () {return redirect('/home');});
+    Route::post('/search',[MovieController::class,'searchMovie'])->middleware('auth');
+    Route::get('/search',function () {return redirect('/home');})->middleware('auth');
+});
 
-Route::get('/admin',function () {return redirect('/admin/home');});
-Route::get('/admin/home',function () {return view('admin.home', ["title" => "Home"]);});
-Route::get('/admin/movies',[MovieController::class, 'showAllAdmin']);
-Route::get('/admin/popular',function () {return view('admin.popular', ["title" => "Popular"]);});
-Route::get('/admin/genre',function () {return view('admin.genre', ["title" => "Genre"]);});
+Route::middleware('admin')->group(function () {
+    Route::get('/admin',function () {return redirect('/admin/home');});
+    Route::get('/admin/home',function () {return view('admin.home', ["title" => "Home"]);});
+    Route::get('/admin/movies',[MovieController::class, 'showAllAdmin']);
+    Route::get('/admin/movies/add', [MovieController::class, 'movieAddPage']);
+    Route::post('/admin/movies/add', [MovieController::class, 'store']);
+    Route::get('/admin/movies/{slug}', [MovieController::class, 'showAdmin']);
+    Route::post('/admin/movies/{slug}/delete', [MovieController::class, 'delete']);
+    Route::post('/admin/movies/{slug}/edit', [MovieController::class, 'update']);
+    Route::get('/admin/popular',function () {return view('admin.popular', ["title" => "Popular"]);});
+    Route::get('/admin/genre',function () {return view('admin.genre', ["title" => "Genre"]);});
 
-Route::get('/admin/movies/add', [MovieController::class, 'movieAddPage']);
-Route::post('/admin/movies/add', [MovieController::class, 'store']);
-Route::get('/admin/movies/{slug}', [MovieController::class, 'showAdmin']);
-Route::post('/admin/movies/{slug}/delete', [MovieController::class, 'delete']);
-Route::post('/admin/movies/{slug}/edit', [MovieController::class, 'update']);
+});
+
+

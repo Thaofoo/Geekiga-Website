@@ -5,8 +5,7 @@
     </div>
     <div class="profile">
 
-        <div class="profile-picture"></div>
-        <div class="profile-name">John Constantine</div>
+        <div class="profile-name">Admin Panel</div>
 
     </div>
 
