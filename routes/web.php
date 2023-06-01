@@ -6,6 +6,7 @@ use App\Models\Movies;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\GenreController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\MovieController;
 use App\Http\Controllers\RegisterController;
@@ -75,7 +76,10 @@ Route::middleware('admin')->group(function () {
     Route::post('/admin/movies/{slug}/delete', [MovieController::class, 'delete']);
     Route::post('/admin/movies/{slug}/edit', [MovieController::class, 'update']);
     Route::get('/admin/popular',function () {return view('admin.popular', ["title" => "Popular"]);});
-    Route::get('/admin/genre',function () {return view('admin.genre', ["title" => "Genre"]);});
+    Route::get('/admin/genre',[GenreController::class, 'showAll']);
+    Route::get('/admin/genre/{slug}', [GenreController::class, 'show']);
+    Route::get('/admin/genre/{slug}/add', [GenreController::class, 'addMovie']);
+    Route::post('/admin/genre/{slug}/add', [GenreController::class, 'storeMovie']);
 
 });
 

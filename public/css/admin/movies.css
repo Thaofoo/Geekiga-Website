@@ -44,6 +44,10 @@ hr{
     font-weight: 200;
 }
 
+.button:hover{
+    background-color: #56140b;
+}
+
 .button:active, .button:visited{
     color: white;
 }

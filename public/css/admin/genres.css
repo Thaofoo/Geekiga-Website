@@ -1,0 +1,43 @@
+h1 {
+    color: white;
+    text-align: center;
+
+}
+
+hr{
+    border-width: 0.5px;
+    border-color: #664e1b4b;
+}
+
+.genre-container{
+    margin-top: 35px;
+}
+
+.genre-container li {
+    display: inline-block;
+    width: 270px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.genre-container li a{
+    display: inline-block;
+    background-color:#9B2212;
+    width: 130px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    border-radius: 10px;
+}
+
+.genre-container li a:hover{
+    background-color: #55130b;
+}
+
+.genre-container li a, .genre-container li a:visited{
+    text-decoration: none;
+    color: white;
+    font-weight: 300;
+}
+
+
+

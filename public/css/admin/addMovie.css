@@ -145,3 +145,7 @@ background: rgb(155, 111, 15);
     margin-top: -10px;
     margin-bottom: 15px;
 }
+
+#select-label{
+    margin-bottom: 15px;
+}
