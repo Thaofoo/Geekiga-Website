@@ -13,9 +13,46 @@
     margin: auto;
     column-gap: 20px;
     width: 95%;
-    padding-top: 80px;
+    padding-top: 15px;
     display: grid;
     justify-content: space-around;
     grid-template-columns: auto auto auto auto auto auto auto ;
 }
 
+.genre_header {
+    overflow: hidden;
+    text-align: center;
+    padding-top: 60px;
+    color: white;
+    display: flex;
+    flex-direction: row;
+  }
+
+.genre_header span {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+  .genre_header:before,
+  .genre_header:after {
+    background-color: #664e1bb8;
+    content: "";
+    flex: 1 1;
+    height: 3px;
+    position: relative;
+    vertical-align: middle;
+    width: 50%;
+    position: relative;
+    top: 2.5rem;
+    border-radius: 15px;
+  }
+
+  .genre_header:before {
+    right: 0.5em;
+    margin-left: -50%;
+  }
+
+  .genre_header:after {
+    left: 0.5em;
+    margin-right: -50%;
+  }
