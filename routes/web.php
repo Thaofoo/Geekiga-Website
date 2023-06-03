@@ -6,6 +6,7 @@ use App\Models\Movies;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
+use Laravel\Socialite\Facades\Socialite;
 use App\Http\Controllers\GenreController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\MovieController;
@@ -108,7 +109,7 @@ Route::middleware(['auth', 'verified'])->group(function () {
 
     Route::post('/reset-password', function (Request $request) {
         $request->validate([
-            
+
             'token' => 'required',
             'email' => 'required|email',
             'password' => 'required|min:8|confirmed',
@@ -132,6 +133,31 @@ Route::middleware(['auth', 'verified'])->group(function () {
                     ? redirect()->route('login')->with('status', __($status))
                     : back()->withErrors(['email' => [__($status)]]);
     })->middleware('guest')->name('password.update');
+
+    Route::get('/auth/redirect', function () {
+        return Socialite::driver('google')->redirect();
+    });
+
+    Route::get('/auth/google/callback', function () {
+        $googleuser = Socialite::driver('google')->user();
+
+        $user = User::updateOrCreate([
+            'email' => $googleuser->email,
+
+        ], [
+            'fname' => $googleuser->user['given_name'],
+            'lname' => $googleuser->user['family_name'],
+            'email' => $googleuser->email,
+            'google_id' => $googleuser->id,
+            'google_token' => $googleuser->token,
+            'google_refresh_token' => $googleuser->refreshToken,
+   
+        ]);
+
+        Auth::login($user);
+
+        return redirect('/home');
+    });
 
 Route::middleware('admin')->group(function () {
     Route::get('/admin',function () {return redirect('/admin/home');});
