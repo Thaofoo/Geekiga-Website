@@ -1,6 +1,6 @@
 @extends('layouts.admintemplate')
 @section('head')
-<link rel="stylesheet" type="text/css" href="{{ asset('css/admin/Addmovie.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ asset('css/admin/addMovie.css') }}">
 <title> Geekiga Admin - Add Movie</title>
 @endsection
 
