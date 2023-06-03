@@ -10,14 +10,14 @@ class PopularController extends Controller
 {
     public function add() {
             return view('admin.addPopularMovie', [
-                "title" => "Genre",
+                "title" => "Popular",
                 "movies" => Movies::where('popular', 0)->get()
             ]);
     }
 
     public function remove() {
         return view('admin.deletePopularMovie', [
-            "title" => "Genre",
+            "title" => "Popular",
             "movies" => Movies::where('popular', 1)->get()
         ]);
     }
