@@ -15,5 +15,5 @@ class MovieGenre extends Model
         "genre_id"
     ];
 
-    public $table = 'movieGenre';
+    public $table = 'moviegenre';
 }

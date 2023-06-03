@@ -58,6 +58,7 @@ class GenreController extends Controller
             "slug" => Str::slug($request->name)
         ];
         Genre::create($input);
+        return redirect("/admin/genre");
     }
 
     public function deleteGenre(Request $request, $slug){
