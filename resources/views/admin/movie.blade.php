@@ -11,7 +11,7 @@
 
 <div class="button-container">
     <a href="{{ URL::to("/movies/" . $movie->slug) }}" class="button add-movie">
-        <img src="{{ asset('interface_assets/movie.svg') }}" height="16px"> <p>Client Version</p>
+        <img src="{{ asset('interface_assets/Movie.svg') }}" height="16px"> <p>Client Version</p>
     </a>
 </div>
 
