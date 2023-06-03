@@ -8,7 +8,7 @@
 
 <div class="genre_header">
 
-    <h1><span>Watch List Page</span></h1>
+    <h1><span>Your Watch List</span></h1>
 
 </div>
 

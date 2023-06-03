@@ -13,6 +13,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
         rel="stylesheet">
+        <script src="https://accounts.google.com/gsi/client" async defer></script>
+
+
 </head>
 
 <body style="background-image: url('{{ asset('interface_assets/tagline_bg.png') }}');">
@@ -52,12 +55,12 @@
                 <button class="loginbutton" type="submit">Login</button>
 
                 <div class="or-separator"><i>or</i></div>
-                <div class="social">
+                <a class="social" href="{{ URL::to("auth/redirect") }}">
                     <div class="go"><i class="fab fa-google"></i>
                         <img src="{{ asset('images/Google.png') }}" class="social-logo" id="social-logo-go">
                         Continue with Google
                     </div>
-                </div>
+                </a>
                 <div class="SizedBox"></div>
                 <div class="SizedBox"></div>
                 <p class="suggest">Don't have an account? <a href="{{ URL::to('signup') }}" class="sign">Sign up
