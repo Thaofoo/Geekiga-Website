@@ -17,11 +17,13 @@ return new class extends Migration
             $table->bigIncrements('id');
             $table->string('fname');
             $table->string('lname');
+            $table->char('gender', 1)->nullable();
             $table->string('email')->unique();
-            $table->string('phone')->unique();
+            $table->string('phone', 14)->nullable();
+            $table->string('image')->nullable();
             $table->timestamp('email_verified_at')->nullable();
+            $table->boolean('admin')->default(false);
             $table->string('password');
-            $table->boolean('admin');
             $table->rememberToken();
             $table->timestamps();
         });
