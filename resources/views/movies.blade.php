@@ -6,6 +6,12 @@
 
 @section('content')
 
+<div class="genre_header">
+
+    <h1><span>{{ $title }} Page</span></h1>
+
+</div>
+
 <div class="posters_container">
     @foreach ($movies as $movie)
 
