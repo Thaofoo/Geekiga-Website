@@ -11,7 +11,7 @@ class Genre extends Model
 {
     use HasFactory;
 
-    public $table = "Genre";
+    public $table = "genre";
     protected $guarded = ['id'];
 
     public function movies(): BelongsToMany
