@@ -31,7 +31,7 @@ body {
 .img-content1 {
     height: 60px;
     object-fit: contain;
-    /* biar ga keikut semisal di split screen, 
+    /* biar ga keikut semisal di split screen,
     gausa di kasi width  */
 }
 
@@ -72,7 +72,7 @@ form h3 {
 
 label {
     display: block;
-    margin-top: 30px;
+    margin-top: 5px;
     font-size: 16px;
     font-weight: 500;
     color: rgb(144, 144, 144);
@@ -81,7 +81,7 @@ label {
 input {
     color: rgb(112, 112, 112);
     display: block;
-    height: 50px;
+    height: 45px;
     width: 100%;
     background-color: rgb(43, 43, 43);
     border-radius: 30px;
@@ -127,3 +127,9 @@ button {
 .SizedBox {
     height: 20px;
 }
+
+.alert-success{
+    color: rgb(23, 94, 23);
+    margin-top: 15px;
+}
+

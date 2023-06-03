@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Auth\Events\Registered;
 
 class RegisterController extends Controller
 {
@@ -19,7 +21,9 @@ class RegisterController extends Controller
 
         unset($validated['cpassword']);
         $validated['password'] = bcrypt($validated['password']);
-        User::create($validated);
-        return redirect('/login');
+        $user = User::create($validated);
+        event(new Registered($user));
+        Auth::login($user);
+        return redirect('/email/verify');
     }
 }

@@ -22,10 +22,17 @@
         <div class="container-content1">
             <img src="{{ asset('images/GEEKIGA LOGO.png') }}" alt="Logo" class="img-content1" />
         </div>
+
         <div class="form">
             <form action="/login" method="POST">
                 @csrf
                 <h3>Sign In</h3>
+
+                @if(session('status'))
+                <div class="alert alert-success" role="alert">
+                    {{ Session::get('status') }}
+                </div>
+                @endif
 
                 <!-- <label for="username">Username</label> -->
                 <div class="inputwrapper">
@@ -39,7 +46,7 @@
                 <input type="password" placeholder="Password" id="password" name="password" required>
 
                 <div class="reset">
-                    <a href="{{ URL::to('forgot') }}" class="forgot">Forgot Your Password?</a>
+                    <a href="{{ URL::to('/forgot-password') }}" class="forgot">Forgot Your Password?</a>
                 </div>
 
                 <button class="loginbutton" type="submit">Login</button>

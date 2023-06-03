@@ -9,9 +9,11 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\GenreController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\MovieController;
+use Illuminate\Auth\Events\PasswordReset;
+use App\Http\Controllers\PopularController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\WatchListController;
-use App\Http\Controllers\PopularController;
+use Illuminate\Foundation\Auth\EmailVerificationRequest;
 
 /*
 |--------------------------------------------------------------------------
@@ -32,10 +34,10 @@ Route::middleware('guest')->group(function () {
     Route::get('/signup', function () {return view('signup');});
     Route::post('/signup', [RegisterController::class, 'store']);
 
-    Route::get('/forgot', function () {return view('forgot');});
+
 });
 
-Route::middleware('auth')->group(function () {
+Route::middleware(['auth', 'verified'])->group(function () {
     Route::post('/logout', [LoginController::class, 'logout'])->middleware('auth');
 
     Route::get('/home', [MovieController::class, 'home'])->middleware('auth');
@@ -57,8 +59,6 @@ Route::middleware('auth')->group(function () {
     //Route::post('/profile/edit', [UserController::class, 'update'])->middleware('auth');
     //Route::get('/profile/edit2', [UserController::class, 'getProfile2'])->middleware('auth');
 
-    Route::get('/verification', function () {return view('verif');})->middleware('auth');
-
     Route::get('/movies', [MovieController::class, 'showAll'])->middleware('auth');
     Route::get('/movies/{slug}', [MovieController::class, 'show'])->middleware('auth');
     Route::post('/movies/{slug}', [MovieController::class, 'watchlist'])->middleware('auth');
@@ -69,6 +69,69 @@ Route::middleware('auth')->group(function () {
     Route::post('/search',[MovieController::class,'searchMovie'])->middleware('auth');
     Route::get('/search',function () {return redirect('/home');})->middleware('auth');
 });
+
+    Route::get('/email/verify/{id}/{hash}', function (EmailVerificationRequest $request) {
+        $request->fulfill();
+
+        return redirect('/home');
+    })->middleware(['auth', 'signed'])->name('verification.verify');
+
+    Route::post('/email/verification-notification', function (Request $request) {
+        $request->user()->sendEmailVerificationNotification();
+
+        return back()->with('message', 'Verification link sent!');
+    })->middleware(['auth', 'throttle:6,1'])->name('verification.send');
+
+    Route::get('/email/verify', function () {
+        return view('auth.verify-email', ['user' => Auth::user()]);
+    })->middleware(['auth', 'verify'])->name('verification.notice');
+
+    Route::get('/forgot-password', function () {
+        return view('auth.forgot-password');
+    })->middleware('guest')->name('password.request');
+
+    Route::post('/forgot-password', function (Request $request) {
+        $request->validate(['email' => 'required|email']);
+
+        $status = Password::sendResetLink(
+            $request->only('email')
+        );
+
+        return $status === Password::RESET_LINK_SENT
+                    ? back()->with(['status' => __($status)])
+                    : back()->withErrors(['email' => __($status)]);
+    })->middleware('guest')->name('password.email');
+
+    Route::get('/reset-password/{token}', function (string $token) {
+        return view('auth.reset-password', ['token' => $token]);
+    })->middleware('guest')->name('password.reset');
+
+    Route::post('/reset-password', function (Request $request) {
+        $request->validate([
+            
+            'token' => 'required',
+            'email' => 'required|email',
+            'password' => 'required|min:8|confirmed',
+
+        ]);
+
+        $status = Password::reset(
+            $request->only('email', 'password', 'password_confirmation', 'token'),
+            function (User $user, string $password) {
+                $user->forceFill([
+                    'password' => Hash::make($password)
+                ])->setRememberToken(Str::random(60));
+
+                $user->save();
+
+                event(new PasswordReset($user));
+            }
+        );
+
+        return $status === Password::PASSWORD_RESET
+                    ? redirect()->route('login')->with('status', __($status))
+                    : back()->withErrors(['email' => [__($status)]]);
+    })->middleware('guest')->name('password.update');
 
 Route::middleware('admin')->group(function () {
     Route::get('/admin',function () {return redirect('/admin/home');});

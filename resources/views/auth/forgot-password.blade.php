@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Geekiga Login</title>
+    <title>Geekiga Forgot Password</title>
     <link rel="icon" type="png" href="{{ asset('images/small-logo.png') }}">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="stylesheet" type="text/css" href="{{ asset('css/forgot.css') }}">
@@ -22,16 +22,28 @@
         <div class="container-content1">
             <img src='{{ asset('images/GEEKIGA LOGO.png') }}' alt="Logo" class="img-content1" />
         </div>
+
+
+
         <div class="form">
-            <form>
+            <form method="post" action="/forgot-password">
+                @csrf
                 <h3>Reset Your Password</h3>
+
                 <p class="suggest">Please enter the email associated with your account and we'll send an email with
                     instructions to reset your password</p>
+
+                    @if(session('status'))
+                    <p class="alert alert-success email-alert suggest" role="alert">
+                        {{ session('status') }}
+                    </p>
+                    @endif
                 <!-- <label for="username">Username</label> -->
                 <div class="SizedBox"></div>
 
-                <input type="text" placeholder="Email" id="username">
-                <button>Send Email</button>
+                <input type="email" placeholder="Email" id="email" name="email">
+                <button type="submit">Send Email</button>
+
                 <div class="SizedBox"></div>
                 <div class="SizedBox"></div>
                 <p class="suggest">Didn't receive our email? <a href="#" class="resend">Resend</a></p>

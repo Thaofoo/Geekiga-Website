@@ -89,3 +89,14 @@ form h3 {
     color: rgb(184, 137, 33);
     text-decoration: none;
 }
+
+.resend{
+    background-color: transparent;
+    border: none;
+    color: rgb(184, 137, 33);
+    font-size: inherit;
+}
+
+.resend:hover{
+    cursor: pointer;
+}

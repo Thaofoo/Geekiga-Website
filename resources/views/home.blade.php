@@ -5,10 +5,13 @@
 @endsection
 
 @section('content')
+
 @if (session('unverified'))
-    <div class="alert alert-success" role="alert">
-        {{ session('unverivied') }}
-    </div>
+<div class="alert unverified" id="alertbox" role="alert">
+    <img src="{{ asset("interface_assets/alert.svg") }}" height="140px">
+    Email is not verified. Please verify your email in profile page.
+    <button class="close_button hero_title_login" onclick="document.getElementById('alertbox').classList.toggle('hide')">Close</button>
+</div>
 @endif
         <div class="hero">
             <img src="{{ asset('interface_assets/hero_pic.png') }}" width="80%" draggable="false">
