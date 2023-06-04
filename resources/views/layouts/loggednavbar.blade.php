@@ -8,7 +8,7 @@
                     </a>
 
                     <a href="{{ URL::to('popular') }}" class="navbar_logged_on_left_button {{ ($title === "Popular") ? 'active_button' : '' }}" id="popular_button">
-                        <img src="{{ asset('interface_assets/Chart.svg') }}" height="16px">
+                        <img src="{{ asset('interface_assets/chart.svg') }}" height="16px">
                         <div class="navbar_logged_on_left_button_text"> Popular </div>
                     </a>
 
@@ -21,7 +21,7 @@
 
 
                     <a href="{{ URL::to('movies') }}" class="navbar_logged_on_left_button {{ ($title === "Movies") ? 'active_button' : '' }}" id="movies_button">
-                        <img src="{{ asset('interface_assets/movie.svg') }}" height="16px">
+                        <img src="{{ asset('interface_assets/Movie.svg') }}" height="16px">
                         <div class="navbar_logged_on_left_button_text" > Movies </div>
                     </a>
 
