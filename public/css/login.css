@@ -11,7 +11,7 @@ body {
     overflow: hidden;
     font-family: 'inter', sans-serif;
     height: 100vh;
-    background-image: url("/public/interface_assets/tagline_bg.png");
+    background-image: url("/interface_assets/tagline_bg.png");
     background-color: rgb(33, 16, 4);
     background-position: center;
     background-repeat: no-repeat;
