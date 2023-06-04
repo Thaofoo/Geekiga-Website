@@ -137,7 +137,8 @@ class MovieController extends Controller
             "poster" => "required|mimes:jpeg,png,jpg",
             "header" => "required|mimes:jpeg,png,jpg",
             "titleImg" => "required|mimes:jpeg,png,jpg",
-            "genre" => "required"
+            "genre" => "required",
+            "videolink" => "nullable"
         ]);
 
         $slug = Str::slug($request['title']) . "-" . $request['year'];
