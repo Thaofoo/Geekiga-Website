@@ -2,6 +2,8 @@
 @section('head')
 <link rel="stylesheet" type="text/css" href="{{ asset('css/play.css') }}">
 <title> Geekiga - {{ $movie->title }} </title>
+<script src="https://cdn.plyr.io/3.7.8/plyr.js"></script>
+<link rel="stylesheet" href="https://cdn.plyr.io/3.7.8/plyr.css" />
 @endsection
 
 @section('content')
@@ -9,7 +11,9 @@
 <h3>{{ $movie->title }} ({{ $movie->year }})</h3>
 
 <div class="player-container">
-    <iframe width="100%" height="100%" class="player" src="{{ $movie->videolink }}" allowfullscreen></iframe>
+    <video id="player" playsinline controls autoplay>
+        <source src="{{ $movie->videolink }}" type="video/mp4">
+    </video>
 
 </div>
 </div>
