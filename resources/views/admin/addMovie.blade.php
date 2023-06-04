@@ -36,7 +36,7 @@
     @enderror
 
     <label for="videolink">Video Link (Not Required)</label>
-    <input type="text" name="videolink" id="videolink" value="{{ $movie->videolink }}">
+    <input type="text" name="videolink" id="videolink">
     @error('videolink')
     <div class="error_msg">{{ $message }}</div>
     @enderror
