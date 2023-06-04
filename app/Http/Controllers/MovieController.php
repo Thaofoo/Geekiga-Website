@@ -70,7 +70,7 @@ class MovieController extends Controller
     public function showPopular(){
         return view('movies', [
             "title" => 'Popular',
-            "movies" => Movies::all(),
+            "movies" => Movies::where('popular', 1),
             "user" => Auth::user()
         ]
         );
