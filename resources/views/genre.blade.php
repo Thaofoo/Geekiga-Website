@@ -15,7 +15,7 @@
 <div class="posters_container">
     @foreach ($movies as $movie)
 
-    <a href="{{ URL::to("/movies/".$movie->slug) }}" class="poster_clip" style="background-image: url('{{ asset('images/posters/'.$movie->slug.'.jpg') }}')"></a>
+    <a href="{{ URL::to("/movies/".$movie->slug) }}" class="poster_clip" style="background-image: url('{{ asset('storage/images/poster/'.$movie->slug.'.jpg') }}')"></a>
 
     @endforeach
 </div>
