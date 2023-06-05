@@ -36,7 +36,7 @@ class Movies extends Model
 
     {
 
-        return $this->belongsToMany(User::class, 'watchList', 'movie_id', 'user_id');
+        return $this->belongsToMany(User::class, 'watchlist', 'movie_id', 'user_id');
 
     }
 

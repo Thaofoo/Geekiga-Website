@@ -53,7 +53,7 @@ class User extends Authenticatable implements MustVerifyEmail, CanResetPassword
 
     {
 
-        return $this->belongsToMany(Movies::class, 'watchList', 'user_id', 'movie_id');
+        return $this->belongsToMany(Movies::class, 'watchlist', 'user_id', 'movie_id');
 
     }
 }
