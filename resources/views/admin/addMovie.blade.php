@@ -35,12 +35,6 @@
     <div class="error_msg">{{ $message }}</div>
     @enderror
 
-    <label for="videolink">Video Link (Not Required)</label>
-    <input type="text" name="videolink" id="videolink">
-    @error('videolink')
-    <div class="error_msg">{{ $message }}</div>
-    @enderror
-
     Genre
        <ul class="genre-container">
             @foreach ($genres as $genre)
