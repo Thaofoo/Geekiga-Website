@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\PcloudController;
 use App\Models\User;
 use App\Models\Genre;
 use App\Models\Movies;
@@ -151,13 +152,16 @@ Route::middleware(['auth', 'verified'])->group(function () {
             'google_id' => $googleuser->id,
             'google_token' => $googleuser->token,
             'google_refresh_token' => $googleuser->refreshToken,
-   
+
         ]);
 
         Auth::login($user);
 
         return redirect('/home');
     });
+
+    Route::get("/uploadvideo", [PcloudController::class, "viewUpload"]);
+    Route::post("/uploadvideo", [PcloudController::class, "uploadVideo"]);
 
 Route::middleware('admin')->group(function () {
     Route::get('/admin',function () {return redirect('/admin/home');});

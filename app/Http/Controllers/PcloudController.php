@@ -2,6 +2,7 @@
 namespace App\Http\Controllers;
 use Rbaskam\LaravelPCloud\App;
 use Rbaskam\LaravelPCloud\Request;
+use Illuminate\Http\Request as Req;
 
 class PcloudController{
 
@@ -34,6 +35,26 @@ public function getFileID(String $slug){
     $request = new Request($this->pCloudApp);
     $response = $request->get($method, $params);
     return $response;
+}
+
+public function uploadVideo(Req $req){
+    $method = "uploadfile";
+    $params = [
+        "path" => "/",
+        "filename" => "testingname.jpg",
+        "file" => $req->file,
+       
+    ];
+
+    $request = new Request($this->pCloudApp);
+    $response = $request->post($method, $params);
+    return $response;
+}
+
+public function viewUpload(){
+    return view("admin.uploadVideo", [
+        "title" => "kontol"
+    ]);
 }
 
 }
