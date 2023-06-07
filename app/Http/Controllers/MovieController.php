@@ -198,7 +198,7 @@ class MovieController extends Controller
         Storage::delete('public/images/poster'.$poster);
         Storage::delete('public/images/header'.$header);
         Storage::delete('public/images/title'.$title);
-        Storage::delete('public/video'.$$videolink);
+        Storage::delete('public/video'.$videolink);
         MovieGenre::where('movie_id', $movieID)->delete();
         WatchLIst::where('movie_id', $movieID)->delete();
         Movies::where('id', $movieID)->delete();
