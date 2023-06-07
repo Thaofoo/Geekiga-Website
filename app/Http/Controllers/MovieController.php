@@ -137,11 +137,13 @@ class MovieController extends Controller
             "poster" => "required|mimes:jpeg,png,jpg",
             "header" => "required|mimes:jpeg,png,jpg",
             "titleImg" => "required|mimes:jpeg,png,jpg",
-            "genre" => "required",
-            "videolink" => "nullable"
+            "video" => "nullable|mimetypes:video/mp4",
         ]);
 
         $slug = Str::slug($request['title']) . "-" . $request['year'];
+
+        $videoFileName = $slug . '.' . 'mp4';
+        $request->video->storeAs('public/video', $videoFileName);
 
         $posterFileName = $slug . '.' . $request->poster->extension();
         $request->poster->storeAs('public/images/poster', $posterFileName);
@@ -157,6 +159,7 @@ class MovieController extends Controller
         $request = $request->except(['poster','header', 'titleImg', 'genre']);
 
         $request['posterimg'] = $posterFileName;
+        $request['videolink'] = asset("storage/video/") . "/" . $videoFileName;;
         $request['headerimg'] = $headerFileName;
         $request['titleimg'] = $titleFileName;
         $request['slug'] = $slug;
@@ -165,13 +168,14 @@ class MovieController extends Controller
 
         $movieID = Movies::where('slug', $slug)->firstOrFail()->id;
 
-        foreach ($genres as $genre) {
+        if($genres != null)
+        {foreach ($genres as $genre) {
             $input = [
                 "movie_id" => $movieID,
                 "genre_id" => $genre,
             ];
             MovieGenre::create($input);
-        }
+        }}
 
         return redirect('/admin/movies');
 
@@ -185,13 +189,16 @@ class MovieController extends Controller
     }
 
     public function delete($slug) {
-        $movieID = Movies::where('slug', $slug)->firstOrFail()->id;
-        $poster = Movies::where('slug', $slug)->firstOrFail()->posterimg;
-        $header = Movies::where('slug', $slug)->firstOrFail()->headerimg;
-        $title = Movies::where('slug', $slug)->firstOrFail()->titleimg;
+        $movie = Movies::where('slug', $slug)->firstOrFail();
+        $movieID = $movie->id;
+        $poster = $movie->posterimg;
+        $header = $movie->headerimg;
+        $title = $movie->titleimg;
+        $videolink = basename($movie->videolink);
         Storage::delete('public/images/poster'.$poster);
         Storage::delete('public/images/header'.$header);
         Storage::delete('public/images/title'.$title);
+        Storage::delete('public/video'.$$videolink);
         MovieGenre::where('movie_id', $movieID)->delete();
         WatchLIst::where('movie_id', $movieID)->delete();
         Movies::where('id', $movieID)->delete();
@@ -209,13 +216,22 @@ class MovieController extends Controller
             "poster" => "mimes:jpeg,png,jpg",
             "header" => "mimes:jpeg,png,jpg",
             "titleImg" => "mimes:jpeg,png,jpg",
+            "video" => "nullable|mimetypes:video/mp4",
             "genre" => ""
         ]);
 
 
 
         $movie = Movies::where('slug', $slug)->firstOrFail();
-        $input = array_filter($request->except(['poster', 'header', 'titleImg', 'genre']));
+        $input = array_filter($request->except(['poster', 'header', 'titleImg', 'genre', 'video']));
+
+        if ($request['video'] != null){
+            $original = basename($movie->videolink);
+            Storage::delete('public/video/'.$original);
+            $fileName = $slug . '.' . "mp4";
+            $request->video->storeAs('public/video', $fileName);
+            $input['videolink'] = asset("storage/video/") . "/" . $fileName;
+        }
 
         if ($request['poster'] != null){
             $original = $movie->posterimg;

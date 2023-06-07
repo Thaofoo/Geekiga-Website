@@ -41,12 +41,6 @@
     <div class="error_msg">{{ $message }}</div>
     @enderror
 
-    <label for="videolink">Video Link</label>
-    <input type="text" name="videolink" id="videolink" value="{{ $movie->videolink }}">
-    @error('videolink')
-    <div class="error_msg">{{ $message }}</div>
-    @enderror
-
     Genre
        <ul class="genre-container">
             @foreach ($genres as $genre)
@@ -56,6 +50,12 @@
             @endforeach
        </ul>
 
+    <label  for="video">Video
+    <input class="file-input" type="file" name="video" id="video">
+    </label>
+    @error('video')
+    <div class="error_msg">{{ $message }}</div>
+    @enderror
 
     <label  for="titleImg">Title Image
         <input class="file-input" type="file" name="titleImg" id="titleImg">

@@ -12,34 +12,29 @@
 <form class="movie-form" action="/admin/movies/add" method="POST" enctype="multipart/form-data">
     @csrf
     <label for="title">Title</label>
-    <input type="text" name="title" id="title">
+    <input type="text" name="title" id="title" value="{{ old('title') }}">
     @error('title')
     <div class="error_msg">{{ $message }}</div>
     @enderror
 
     <label for="year">Year</label>
-    <input type="text" name="year" id="year">
+    <input type="text" name="year" id="year" value="{{ old('year') }}">
     @error('year')
     <div class="error_msg">{{ $message }}</div>
     @enderror
 
     <label for="duration">Duration</label>
-    <input type="text" name="duration" id="duration">
+    <input type="text" name="duration" id="duration" value="{{ old('duration') }}">
     @error('duration')
     <div class="error_msg">{{ $message }}</div>
     @enderror
 
     <label for="desc">Description</label>
-    <textarea type="text" name="desc" id="desc"></textarea>
+    <textarea type="text" name="desc" id="desc">{{ old('desc') }}</textarea>
     @error('desc')
     <div class="error_msg">{{ $message }}</div>
     @enderror
 
-    <label for="videolink">Video Link (Not Required)</label>
-    <input type="text" name="videolink" id="videolink">
-    @error('videolink')
-    <div class="error_msg">{{ $message }}</div>
-    @enderror
 
     Genre
        <ul class="genre-container">
@@ -50,15 +45,19 @@
             @endforeach
        </ul>
 
-
-
+    <label  for="video">Video
+    <input class="file-input" type="file" name="video" id="video">
+    </label>
+    @error('video')
+    <div class="error_msg">{{ $message }}</div>
+    @enderror
 
     <label  for="titleImg">Title Image
-        <input class="file-input" type="file" name="titleImg" id="titleImg">
-        </label>
-        @error('titleImg')
-        <div class="error_msg">{{ $message }}</div>
-        @enderror
+    <input class="file-input" type="file" name="titleImg" id="titleImg">
+    </label>
+    @error('titleImg')
+    <div class="error_msg">{{ $message }}</div>
+    @enderror
 
     <label  for="poster">Poster
     <input class="file-input" type="file" name="poster" id="poster">
