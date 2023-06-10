@@ -177,7 +177,8 @@ class MovieController extends Controller
             MovieGenre::create($input);
         }}
 
-        return redirect('/admin/movies');
+        return response()->json(['success'=>'Successfully uploaded.']);
+        //return redirect('/admin/movies');
 
     }
 
@@ -213,11 +214,11 @@ class MovieController extends Controller
             "year" => "max:255",
             "duration" => "max:255",
             "desc" => "",
-            "poster" => "mimes:jpeg,png,jpg",
-            "header" => "mimes:jpeg,png,jpg",
-            "titleImg" => "mimes:jpeg,png,jpg",
+            "poster" => "nullable|mimes:jpeg,png,jpg",
+            "header" => "nullable|mimes:jpeg,png,jpg",
+            "titleImg" => "nullable|mimes:jpeg,png,jpg",
             "video" => "nullable|mimetypes:video/mp4",
-            "genre" => ""
+            "genre" => "nullable",
         ]);
 
 
@@ -306,7 +307,7 @@ class MovieController extends Controller
         }
 
         session()->flash('success', 'Movie Updated');
-        return redirect('/admin/movies/');
+        return response()->json(['success'=>'Successfully uploaded.']);
 
     }
 

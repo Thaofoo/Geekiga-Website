@@ -1,0 +1,70 @@
+h3{
+    margin-left: 20px;
+    margin-top: 30px;
+    font-weight: 500;
+}
+
+.stat-box{
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-around;
+    height: 100px;
+}
+
+.stat-online, .stat-registered, .stat-uploaded{
+    width: 30%;
+    background-color: #463526;
+    border-radius: 20px;
+}
+
+.stat-title{
+    font-size: 13px;
+    font-weight: 700;
+    padding-top: 25px;
+    padding-left: 30px;
+}
+
+.stat-num{
+    font-size: 30px;
+    font-weight: 400;
+    padding-left: 30px;
+    margin-top: 4px;
+}
+
+.stat-num span{
+    font-size: 15px;
+}
+
+.about-us{
+    text-align: center;
+    position: relative;
+    left: 50%;
+    transform: translatex(-50%);
+    margin-top: 35px;
+    border-radius: 20px;
+    height: 450px;
+    width: 96%;
+    background-color: #463526;
+}
+
+.about-us h2{
+    padding-top: 40px;
+    text-align: center;
+}
+
+.about-us img{
+    width: 150px;
+    border-radius: 50%;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.about-us span{
+    width: 80%;
+    padding-left: 40px;
+    padding-right: 40px;
+    margin-top: 10px;
+    font-size: 20px;
+}

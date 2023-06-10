@@ -135,10 +135,17 @@ background: rgb(155, 111, 15);
 }
 
 .delete-button{
-    margin-left: 15px;
+    margin-left: 20px;
 }
 
 .error_msg{
+    color: #6d180c;
+    font-size: 14px;
+    margin-top: -10px;
+    margin-bottom: 15px;
+}
+
+label span{
     color: #6d180c;
     font-size: 14px;
     margin-top: -10px;
@@ -152,3 +159,25 @@ background: rgb(155, 111, 15);
 .button-container img{
     margin-right: 10px;
 }
+
+.hidden {
+    display: none;
+}
+
+.progress{
+
+    height: 25px;
+    border-radius: 7px;
+    margin-bottom: 15px;
+    border: #3d2d1d solid 1px;
+}
+
+.progress-bar{
+    background-color: rgb(27, 72, 16);
+    border-radius: 7px;
+    height: 20px;
+    font-size: 11px;
+    text-indent: 10px;
+    padding-top: 5px
+}
+

@@ -13,6 +13,7 @@ use App\Http\Controllers\MovieController;
 use Illuminate\Auth\Events\PasswordReset;
 use App\Http\Controllers\PopularController;
 use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\WatchListController;
 use Illuminate\Foundation\Auth\EmailVerificationRequest;
 
@@ -151,7 +152,7 @@ Route::middleware(['auth', 'verified'])->group(function () {
             'google_id' => $googleuser->id,
             'google_token' => $googleuser->token,
             'google_refresh_token' => $googleuser->refreshToken,
-   
+
         ]);
 
         Auth::login($user);
@@ -161,7 +162,7 @@ Route::middleware(['auth', 'verified'])->group(function () {
 
 Route::middleware('admin')->group(function () {
     Route::get('/admin',function () {return redirect('/admin/home');});
-    Route::get('/admin/home',function () {return view('admin.home', ["title" => "Home"]);});
+    Route::get('/admin/home',[DashboardController::class, 'index']);
 
     Route::get('/admin/movies',[MovieController::class, 'showAllAdmin']);
     Route::get('/admin/movies/add', [MovieController::class, 'movieAddPage']);
