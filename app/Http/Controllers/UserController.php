@@ -58,7 +58,7 @@ class UserController extends Controller
         if ($request['image'] != null){
             $fileName = Auth::id() . '.' . $request->image->extension();
             $request->image->storeAs('public/images/profile', $fileName);
-            $input['image'] = $fileName;
+            $input['image'] = asset('storage/images/profile/' . $fileName);
         }
 
 
