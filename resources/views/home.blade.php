@@ -21,7 +21,7 @@
                 </div>
                 <img class="hero_title_wall" src="{{ asset('interface_assets/hero_title.png') }}" width="750px" draggable="false">
                 <div class="hero_title_subdesc">
-                    {{ $movie->duration }}
+                    {{ $movie->year }} • {{ $movie->duration }}
                 </div>
                 <div class="hero_title_desc">
                     {{ $movie["desc"] }}
