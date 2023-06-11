@@ -110,6 +110,7 @@
             },
             error: function (err){
                 if (err.status == 422) {
+                    $('.error_msg').remove() 
                     hidebar();
                     $.each(err.responseJSON.errors, function (i, error) {
                         var el = $(document).find('[for="'+i+'"]');
