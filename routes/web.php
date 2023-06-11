@@ -141,7 +141,7 @@ Route::middleware(['auth', 'verified'])->group(function () {
 
     Route::get('/auth/google/callback', function () {
         $googleuser = Socialite::driver('google')->user();
-        ddd($googleuser);
+        dd($googleuser);
 
         $userTemp = User::where('email', $googleuser->email);
         $user = User::updateOrCreate([
