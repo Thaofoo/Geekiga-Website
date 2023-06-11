@@ -10,7 +10,7 @@
         <div class="box">
             <div class="profile-box">
                 @if ($user->image != null)
-                            <img class="profile-picture" src="{{ asset('storage/images/profile/'.$user->image) }}">
+                            <img class="profile-picture" src="{{ $user->image }}">
                             @else
                             <img class="profile-picture" src="{{ asset('interface_assets/default.webp') }}">
                             @endif
