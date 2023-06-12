@@ -145,6 +145,7 @@ input {
     line-height: 42px;
     width: 100%;
     justify-content: space-between;
+    text-decoration: none;
 }
 
 .social div {
@@ -165,8 +166,9 @@ input {
 
 .social div:hover {
     transition: 0.4s;
-    background-color: rgba(255, 255, 255, 0.599);
+    background-color: rgba(255, 255, 255, 0.823);
     cursor: pointer;
+    color: black;
 }
 
 .social i {

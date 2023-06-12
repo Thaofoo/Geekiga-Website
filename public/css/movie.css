@@ -10,7 +10,7 @@ body {
 
 .movie_image{
     width: 100vw;
-    height: 45vw;
+    height: 100vh;
     object-fit:cover;
     -webkit-user-drag: none;
     user-select: none;

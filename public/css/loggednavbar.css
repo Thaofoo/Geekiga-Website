@@ -8,11 +8,11 @@ body {
     background: linear-gradient(140deg, rgba(50, 36, 10, 1) 0%, rgba(16, 12, 4, 1) 100%);
     user-select: none;
     overscroll-behavior-y: none;
+    height: 1px;
 }
 
 html{
     overscroll-behavior-y: none;
-    height: 1px;
 }
 
 #navbar{
