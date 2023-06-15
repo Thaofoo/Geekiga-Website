@@ -173,7 +173,7 @@
 }
 
 .poster_clip {
-    height: 272px;
+    height: 290px;
     width: 190px;
     background-color: #7c7972;
     border: #664e1b solid 1px;
@@ -181,6 +181,7 @@
     background-repeat: unset;
     display: inline-block;
     margin-right: 15px;
+    margin-bottom: 10px;
 }
 
 
